@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_main_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <View
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_2"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_22"
+                android:background="@drawable/ic_email_divider"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_cancel"
+                    style="@style/txtInviteEmailCancel"
+                    android:text="@string/tb_cancel"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:textColor="@color/ttu_black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/txtInviteNewEmailTitle"
+                    android:layout_weight="1"
+                    android:text="@string/tb_new_email"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_send"
+                    style="@style/txtInviteEmailSend"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/tb_send"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include layout="@layout/common_email_divider"/>
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/cl_email_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:minHeight="@dimen/dp_20"
+                        android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_email_to"
+                                style="@style/txtInviteEmailNew"
+                                android:layout_weight="0"
+                                android:text="@string/new_email_to_title"/>
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/edt_email_to"
+                                style="@style/edtEmailNew"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_marginStart="@dimen/dp_4"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:singleLine="true"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <include
+                            layout="@layout/common_email_light_gray_divider"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cl_email_to"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/cl_email_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:minHeight="@dimen/dp_20"
+                        android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_email_from"
+                                style="@style/txtInviteEmailNew"
+                                android:layout_weight="0"
+                                android:text="@string/new_email_from_title"/>
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/edt_email_from"
+                                style="@style/edtEmailNew"
+                                android:layout_marginStart="@dimen/dp_4"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:text="@string/new_email_from"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <include
+                            layout="@layout/common_email_light_gray_divider"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cl_email_from"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/cl_email_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:minHeight="@dimen/dp_20"
+                        android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_email_subject"
+                                style="@style/txtInviteEmailNew"
+                                android:layout_weight="0"
+                                android:text="@string/new_email_subject_title"/>
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/edt_email_subject"
+                                style="@style/edtEmailSubject"
+                                android:layout_marginStart="@dimen/dp_4"
+                                android:layout_weight="1"
+                                android:text="@string/new_email_subject"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <include
+                            layout="@layout/common_email_light_gray_divider"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cl_email_subject"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_email_message"
+                        style="@style/edtEmailBody"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_18"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:lineSpacingExtra="@dimen/dp_4"
+                        android:text="@string/new_email_body"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

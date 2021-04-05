@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/padding_margin_small_6">
+
+        <include layout="@layout/common_profile_picture"
+                 android:id="@+id/roundAvatarImageView"
+                 android:layout_width="@dimen/round_avatar_size"
+                 android:layout_height="@dimen/round_avatar_size"
+                 android:src="@drawable/placeholder"
+                 app:layout_constraintTop_toTopOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintBottom_toBottomOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintStart_toStartOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintEnd_toEndOf="@+id/roundAvatarMomentImageView"/>
+
+        <ImageView
+                android:id="@+id/roundAvatarMomentImageView"
+                android:layout_width="@dimen/round_avatar_moment_size"
+                android:layout_height="@dimen/round_avatar_moment_size"
+                app:srcCompat="@drawable/moment_background"
+                android:tint="?colorAccent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                style="@style/RoundAvatarTextView"
+                android:id="@+id/userNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholderLong"
+                android:drawablePadding="@dimen/padding_margin_small_4"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/roundAvatarImageView"
+                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintBottom_toBottomOf="@+id/roundAvatarImageView"/>
+
+        <TextView
+                style="@style/RoundAvatarSecondaryTextView"
+                android:id="@+id/userFullNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="BigNotificationViewModelBinding">
+
+        <variable
+            name="data"
+            type="rs.highlande.app.tatatu.model.NotificationResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_notification_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_notification_big_picture"
+            android:layout_width="@dimen/dp_108"
+            android:layout_height="@dimen/dp_162"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_notification_title_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_added_title"
+            style="@style/txtNotificationTitleAdded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/notification_added" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_title_bold"
+            style="@style/txtNotificationTitleBold"
+            android:layout_marginTop="@dimen/dp_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_notification_added_title"
+            tools:text="@string/notification_title_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_date"
+            style="@style/txtNotificationDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Yesterday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_des"
+            style="@style/txtNotificationDes"
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_notification_big_picture"
+            app:layout_constraintTop_toBottomOf="@id/txt_notification_title_bold"
+            tools:text="@string/notification_big_des" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

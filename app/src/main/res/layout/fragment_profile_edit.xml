@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SettingEditProfileViewModelBinding">
+
+        <variable
+                name="mViewModel"
+                type="rs.highlande.app.tatatu.feature.account.profile.view.viewmodel.ProfileEditViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+
+        <include
+                android:id="@+id/tb_edit"
+                layout="@layout/toolbar_settings" />
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:background="?colorPrimary"
+                android:clickable="true"
+                android:fillViewport="true"
+                android:focusable="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tb_edit">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                <!-- INFO: 2019-08-13    uses common layout but LOSES shadow -->
+                <include
+                        android:id="@+id/profilePicture"
+                        style="@style/imgSettingsProfile"
+                        layout="@layout/common_profile_picture"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingEnd="@dimen/dp_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profilePicture">
+
+                    <androidx.emoji.widget.EmojiAppCompatTextView
+                            android:id="@+id/txt_settings_userName"
+                            style="@style/txtSettingsProfileName"
+                            android:layout_marginTop="@dimen/dp_18"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="@string/title_andreaiervolinoproducer" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_settings_add_image"
+                            style="@style/txtSettingsAddImageTitle"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_userName"
+                            tools:text="@string/settings_add_image" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_settings_full_name"
+                            style="@style/txtSettingsEditTextTitle"
+                            android:layout_marginTop="@dimen/dp_48"
+                            android:text="@string/settings_full_name"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_add_image" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_settings_full_name"
+                            style="@style/edtSettingsCommonEmail"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords|textPersonName"
+                            android:text="@={mViewModel.mFullName}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_full_name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_settings_username"
+                            style="@style/txtSettingsEditTextTitle"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:text="@string/settings_user_name"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edt_settings_full_name" />
+
+
+                    <androidx.emoji.widget.EmojiAppCompatEditText
+                            android:id="@+id/edt_settings_username"
+                            style="@style/edtSettingsCommonEmail"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords|textPersonName"
+                            app:addTextChangedListener="@{mViewModel.mUserNameTextWatcher}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_username" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_verified"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_12"
+                            android:visibility="@{safeUnbox(mViewModel.verifyUserName)}"
+                            app:layout_constraintBottom_toBottomOf="@id/edt_settings_username"
+                            app:layout_constraintEnd_toEndOf="@id/edt_settings_username"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_username"
+                            app:layout_constraintTop_toTopOf="@id/edt_settings_username"
+                            app:srcCompat="@drawable/ic_verified" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_settings_bio"
+                            style="@style/txtSettingsEditTextTitle"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:text="@string/settings_bio"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edt_settings_username" />
+
+                    <androidx.emoji.widget.EmojiAppCompatEditText
+                            android:id="@+id/edt_settings_bio"
+                            style="@style/edtSettingsCommonEditTextComment"
+                            android:imeOptions="actionNext"
+                            android:maxHeight="@dimen/dp_100"
+                            android:minHeight="@dimen/dp_100"
+                            android:paddingStart="@dimen/dp_16"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_16"
+                            android:scrollbars="vertical"
+                            android:text="@={mViewModel.mBio}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_bio" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_settings_personal_website"
+                            style="@style/txtSettingsEditTextTitle"
+                            android:layout_marginTop="@dimen/dp_18"
+                            android:text="@string/settings_personal_website"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edt_settings_bio" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_settings_personal_website"
+                            style="@style/edtSettingsCommonEmail"
+                            android:imeOptions="actionDone"
+                            android:inputType="textWebEmailAddress"
+                            android:text="@={mViewModel.mWebsite}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_settings_personal_website" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/ll_edit_private_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_22"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center|start"
+                            android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dp_12"
+                            android:paddingBottom="@dimen/dp_12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/edt_settings_personal_website"
+                            tools:ignore="UnusedAttribute">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_settings_plus_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_dropdown_icon_plus" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_edit_private"
+                                style="@style/txtSettingsProfileName"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center"
+                                android:text="@string/title_edit_private_information" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/ll_private_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_22"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dp_48"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ll_edit_private_info">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_email"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:text="@string/settings_email_address" />
+
+                        <!-- INFO: 2019-08-13    email is by default disabled -->
+                        <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_settings_email"
+                                style="@style/edtSettingsCommonEmail"
+                                android:enabled="false"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:text="@={mViewModel.mEmail}" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_password"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/settings_password" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_settings_password"
+                                style="@style/edtSettingsCommonEmail"
+                                android:enabled="true"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPassword"
+                                android:text="@={mViewModel.mPassword}" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_phone_no"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/settings_phone_number" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_settings_phone_no"
+                                style="@style/edtSettingsCommonEmail"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:text="@={mViewModel.mPhone}" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_country"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/settings_country" />
+
+                        <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="@dimen/dp_0">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginEnd="@dimen/dp_16"
+                                    app:srcCompat="@drawable/ic_chevron_select" />
+
+                            <Spinner
+                                    android:id="@+id/spinner_country"
+                                    style="@style/SpinnerCommonSettings"
+                                    android:entries="@array/Gender" />
+
+
+                        </FrameLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_gender"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/settings_gender" />
+
+                        <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <Spinner
+                                    android:id="@+id/spinner_gender"
+                                    style="@style/SpinnerCommonSettings"
+                                    android:entries="@array/Gender" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginEnd="@dimen/dp_16"
+                                    app:srcCompat="@drawable/ic_chevron_select" />
+
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_settings_dob"
+                                style="@style/txtSettingsEditTextTitle"
+                                android:layout_marginTop="@dimen/dp_18"
+                                android:text="@string/settings_dob" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edt_settings_dob"
+                                style="@style/edtSettingsCommonEmail"
+                                android:hint="@string/settings_date"
+                                android:imeOptions="actionDone"
+                                android:inputType="datetime"
+                                android:maxLength="10"
+                                android:text="@={mViewModel.mDOB}" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                            android:id="@+id/settings_divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?buttonColorPrimary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ll_private_info" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_save_changes"
+                            style="@style/btn_save_changes"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                            android:text="@string/btn_save_changes"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/settings_divider" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_discard_changes"
+                            style="@style/btn_discard_changes"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                            android:text="@string/btn_discard_changes"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/btn_save_changes" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_delete_sign_out"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_36"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/btn_discard_changes">
+
+                        <!-- INFO: 2019-09-05    currently NO-OP -> HIDDEN -->
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_delete_profile"
+                                style="@style/txtSettingsAddImageTitle"
+                                android:paddingTop="@dimen/dp_12"
+                                android:paddingBottom="@dimen/dp_12"
+                                android:text="@string/settings_delete_profile"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_sign_out"
+                                style="@style/txtSettingsAddImageTitle"
+                                android:paddingTop="@dimen/dp_12"
+                                android:paddingBottom="@dimen/dp_12"
+                                android:text="@string/settings_sign_out"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

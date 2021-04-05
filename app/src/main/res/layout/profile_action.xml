@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/actionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_4">
+
+        <TextView
+                style="@style/ProfileButton"
+                android:id="@+id/profile_action_button"
+                android:text="@string/profile_message"
+                android:minWidth="@dimen/profile_button_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:textColor="?attr/buttonTextColorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                style="@style/ProfileButtonSecondary"
+                android:id="@+id/profile_requested_button"
+                android:minWidth="@dimen/profile_button_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_requested"
+                android:textColor="?attr/buttonTextColorSecondary"
+                android:visibility="invisible"
+                android:elevation="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <ImageView
+                android:id="@+id/profileStatusIcon"
+                android:minWidth="@dimen/profile_status_image_size"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/profile_status_image_size"
+                android:layout_marginStart="@dimen/padding_margin_large_24"
+                android:scaleType="center"
+                app:layout_constraintTop_toTopOf="@+id/profile_action_button"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_action_button"
+                app:layout_constraintStart_toEndOf="@+id/profile_action_button"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

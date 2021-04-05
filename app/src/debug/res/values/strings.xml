@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">TaTaTu-DEV</string>
+
+    <string name="url_redeem" translatable="false">https://staging.tatatuecommerce.com/sso</string>
+    <string name="url_wallet" translatable="false">"https://staging.mytatatuwallet.com/sso"</string>
+
+    <string name="comscore_publisher_id" translatable="false">32987078</string>
+</resources>

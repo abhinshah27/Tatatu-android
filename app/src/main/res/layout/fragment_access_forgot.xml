@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ForgotViewModelBinding">
+
+        <variable
+            name="forgotViewModel"
+            type="rs.highlande.app.tatatu.feature.authentication.view.forgot.ForgotViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_login_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_54"
+            app:srcCompat="@drawable/ic_logo_red" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginTop="@dimen/dp_54"
+            android:layout_marginEnd="@dimen/dp_28"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txl_forgot_email"
+                style="@style/CommonTextInputLayout"
+                android:layout_marginTop="@dimen/dp_18"
+                android:hint="@string/msg_email_address"
+                app:errorText="@{forgotViewModel.errorEmail}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_mobile_country"
+                    style="@style/CommonTextInputEditText"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:onTextChanged="@{forgotViewModel::onTextChanged}"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_send"
+                style="@style/BtnPreviewPostRed"
+                android:layout_marginTop="@dimen/dp_28"
+                android:onClick="@{(v)-> forgotViewModel.onClick(v)}"
+                android:text="@string/tb_send"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_back_to_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:onClick="@{(v)-> forgotViewModel.onClick(v)}"
+                android:padding="@dimen/dp_8"
+                android:text="@string/msg_back_to_sign_in"
+
+                android:textColor="@color/ttu_black"
+                android:textSize="@dimen/sp_14" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

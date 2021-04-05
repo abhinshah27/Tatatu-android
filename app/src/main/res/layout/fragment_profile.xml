@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/ProfileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                layout="@layout/common_toolbar_back"
+                android:id="@+id/profileToolbar"
+                android:elevation="@dimen/toolbar_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileToolbar"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/ProfileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                <include
+                        android:id="@+id/userPicture"
+                        style="@style/ProfileImage"
+                        layout="@layout/common_profile_picture"
+                        android:layout_width="@dimen/round_avatar_size"
+                        android:layout_height="@dimen/round_avatar_size"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/ProfileFollowerTextLabel"
+                    android:id="@+id/user_followers_label_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/user_following_label_textview"/>
+
+                <TextView
+                    style="@style/ProfileFollowerText"
+                    android:id="@+id/user_followers_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/user_followers_label_textview"
+                    app:layout_constraintStart_toStartOf="@+id/user_followers_label_textview"
+                    app:layout_constraintEnd_toEndOf="@+id/user_followers_label_textview"/>
+
+                <View
+                    android:id="@+id/sectionFollowers"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_vertical_divider_height"
+                    android:layout_marginTop="@dimen/padding_margin_large_28"
+                    android:background="?selectableItemBackground"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@+id/user_followers_label_textview"
+                    app:layout_constraintStart_toStartOf="@+id/user_followers_label_textview"
+                    app:layout_constraintEnd_toStartOf="@id/user_following_label_textview"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_followers_number_textview"/>
+
+                <include layout="@layout/common_divider"
+                    android:id="@+id/follow_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/profile_vertical_divider_height"
+                    android:layout_marginTop="@dimen/padding_margin_large_28"
+                    app:layout_constraintTop_toTopOf="@+id/user_followers_label_textview"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_followers_number_textview"
+                    app:layout_constraintStart_toEndOf="@+id/user_followers_label_textview"
+                    app:layout_constraintEnd_toStartOf="@+id/user_following_label_textview"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+
+                <TextView
+                    style="@style/ProfileFollowingTextLabel"
+                    android:id="@+id/user_following_label_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/user_followers_label_textview"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_followers_label_textview"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    style="@style/ProfileFollowingText"
+                    android:id="@+id/user_following_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/user_following_label_textview"
+                    app:layout_constraintStart_toStartOf="@+id/user_following_label_textview"
+                    app:layout_constraintEnd_toEndOf="@+id/user_following_label_textview"/>
+
+                <View
+                    android:id="@+id/sectionFollowing"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/profile_vertical_divider_height"
+                    android:layout_marginTop="@dimen/padding_margin_large_28"
+                    android:background="?selectableItemBackground"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@+id/user_followers_label_textview"
+                    app:layout_constraintStart_toStartOf="@+id/user_following_label_textview"
+                    app:layout_constraintEnd_toEndOf="@id/user_following_label_textview"
+                    app:layout_constraintBottom_toBottomOf="@+id/user_following_number_textview"/>
+
+                <androidx.constraintlayout.widget.Group
+                        android:id="@+id/follow_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="user_followers_label_textview,user_followers_number_textview,follow_divider,user_following_label_textview,user_following_number_textview,sectionFollowers,sectionFollowing" />
+
+                <ViewStub
+                        style="@style/ProfileAction"
+                        android:id="@+id/profileaction_viewstub"
+                        android:inflatedId="@+id/profileaction_viewstub"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/padding_margin_small_4"
+                        android:paddingEnd="@dimen/padding_margin_small_4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/user_followers_label_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/sectionFollowers" />
+
+                <TextView
+                        android:id="@+id/user_fullname_textview"
+                        style="@style/ProfileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/padding_margin_small_4"
+                        app:layout_constraintBottom_toTopOf="@+id/donation_list_label_textview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileaction_viewstub"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:text="@string/placeholder" />
+
+                <TextView
+                        android:id="@+id/userTitleTextView"
+                        style="@style/ProfileTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/user_fullname_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/user_fullname_textview" />
+
+                <androidx.emoji.widget.EmojiAppCompatTextView
+                        android:id="@+id/user_description_textview"
+                        style="@style/ProfileDesc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userTitleTextView"
+                        tools:text="@string/placeholderLong" />
+
+                <TextView
+                        android:id="@+id/userWebSiteTextView"
+                        style="@style/ProfileWebSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="@+id/user_fullname_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/user_description_textview" />
+
+
+                <androidx.constraintlayout.widget.Group
+                        android:id="@+id/donating_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="donation_list_label_textview,donating_arrow_imageview,donationList,donationDivider" />
+
+                <include
+                        android:id="@+id/donationDivider"
+                        layout="@layout/common_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/padding_margin_medium_16"
+                        android:layout_marginTop="@dimen/padding_margin_medium_16"
+                        android:layout_marginEnd="@dimen/padding_margin_medium_16"
+                        android:layout_marginBottom="@dimen/padding_margin_medium_16"
+                        app:layout_constraintBottom_toTopOf="@+id/donation_list_label_textview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userWebSiteTextView" />
+
+                <TextView
+                        android:id="@+id/donation_list_label_textview"
+                        style="@style/ProfileDonatingLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_donating"
+                        app:layout_constraintStart_toStartOf="@+id/user_fullname_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/donationDivider" />
+
+                <ImageView
+                        android:id="@+id/donating_arrow_imageview"
+                        android:layout_width="@dimen/profile_arrow_size"
+                        android:layout_height="@dimen/profile_arrow_size"
+                        android:tint="?iconColorSelected"
+                        app:layout_constraintBottom_toBottomOf="@+id/donation_list_label_textview"
+                        app:layout_constraintStart_toEndOf="@+id/donation_list_label_textview"
+                        app:layout_constraintTop_toTopOf="@+id/donation_list_label_textview"
+                        app:layout_constraintVertical_bias="0.75"
+                        app:srcCompat="@drawable/ic_chevron_accent_right" />
+
+                <TextView
+                        android:id="@+id/donationList"
+                        style="@style/TextValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingTop="@dimen/padding_margin_small_4"
+                        android:paddingBottom="@dimen/padding_margin_large_30"
+                        app:layout_constraintStart_toStartOf="@+id/user_fullname_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/donation_list_label_textview" />
+
+                <include
+                        android:id="@+id/postsDivider"
+                        layout="@layout/common_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginStart="@dimen/padding_margin_medium_16"
+                        android:layout_marginEnd="@dimen/padding_margin_medium_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/donationList" />
+
+                <FrameLayout
+                        android:id="@+id/tabContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/postsDivider" />
+
+                <TextView
+                        android:id="@+id/private_profile_textview"
+                        style="@style/TextValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_private"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/postsDivider" />
+
+                <!-- TODO: Use the same loader as everywhere else -->
+
+                <include
+                        android:id="@+id/profileLoader"
+                        layout="@layout/loader"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

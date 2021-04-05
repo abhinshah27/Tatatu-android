@@ -1,0 +1,26 @@
+<vector android:height="20dp" android:viewportHeight="917"
+    android:viewportWidth="917" android:width="20dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h917v917h-917z M 0,0"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M720,541C744,541 767,546 789,555 811,564 830,577 847,593 863,610 876,630 885,652 896,673 900,696 900,720 900,744 896,767 885,789 876,811 863,830 847,847 830,863 811,876 789,885 767,896 744,900 720,900 696,900 673,896 652,885 630,876 610,863 593,847 577,830 564,811 555,789 546,767 541,744 541,720 541,696 546,673 555,652 564,630 577,610 593,593 610,577 630,564 652,555 673,546 696,541 720,541Z"
+            android:strokeColor="?iconColorSelected" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M660,781L781,660"
+            android:strokeColor="?iconColorSelected" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M660,660L781,781"
+            android:strokeColor="?iconColorSelected" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M625,254C625,335 583,410 514,451 477,473 435,485 392,485 344,485 297,469 259,441 196,398 160,327 160,252 159,123 263,18 391,17 519,16 624,119 625,248 625,250 625,252 625,254Z"
+            android:strokeColor="?iconColorSelected" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M17,795C27,737 48,681 81,633 115,581 162,538 216,508 268,547 332,568 396,567 461,567 523,546 575,508"
+            android:strokeColor="?iconColorSelected" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+    </group>
+</vector>

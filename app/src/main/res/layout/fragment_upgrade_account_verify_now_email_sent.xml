@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SettingsUpgradeAccountVerifyNowEmailViewModelBinding">
+
+        <variable
+            name="mViewModel"
+            type="rs.highlande.app.tatatu.feature.account.settings.view.viewModel.SettingsUpgradeAccountVerifyNowEmailViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_verify_account_email_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginEnd="@dimen/dp_1"
+            android:clipToPadding="false"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="@{(v)-> mViewModel.onClick(v)}"
+            android:padding="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete_chat_icon"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+
+            <ImageView
+                android:id="@+id/img_common_verify_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_email_sent_new" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_verify_account_email_sent_title"
+                style="@style/txtVerifyTitle"
+                android:layout_marginTop="@dimen/dp_84"
+                android:text="@string/title_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_verify_email_sent_msg"
+                style="@style/txtPrivacySubTitle"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/msg_we_have_sent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_verify_account_email_sent_title" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_verify_account_email"
+                style="@style/btn_save_changes"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                android:text="@string/btn_ok"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/insights_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingEnd="@dimen/padding_margin_medium_16">
+
+        <TextView
+                style="@style/ProfileButton"
+                android:id="@+id/profileEditButton"
+                android:text="@string/profile_edit"
+                android:minWidth="@dimen/profile_button_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:textColor="?attr/buttonTextColorPrimary"
+                app:layout_constraintTop_toTopOf="@+id/insightsLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/insightsLabel"
+                app:layout_constraintEnd_toStartOf="@+id/insightsLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                style="@style/TextLabel"
+                android:id="@+id/insightsLabel"
+                android:text="@string/profile_insights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingStart="@dimen/padding_margin_large_30"
+                android:paddingEnd="@dimen/padding_margin_small_4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profileEditButton"/>
+
+        <ImageView
+                android:id="@+id/insights_arrow_imageview"
+                app:srcCompat="@drawable/ic_chevron_accent_right"
+                android:layout_width="@dimen/profile_arrow_size"
+                android:layout_height="@dimen/profile_arrow_size"
+                android:tint="@color/ttu_l_icon_selected"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/insightsLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/insightsLabel"
+                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintStart_toEndOf="@+id/insightsLabel"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

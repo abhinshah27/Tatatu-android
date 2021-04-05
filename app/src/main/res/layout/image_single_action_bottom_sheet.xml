@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/padding_margin_medium_16"
+        android:paddingBottom="@dimen/padding_margin_large_30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_sheet_height">
+
+        <ImageView
+                style="@style/BottomFragmentSheetImage"
+                android:id="@+id/bottomImageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/profile_bottom_sheet_image_size"
+                android:layout_height="@dimen/profile_bottom_sheet_image_size"/>
+
+        <TextView
+                style="@style/BottomFragmentSheetHint"
+                android:id="@+id/bottomSheetHint"
+                android:text="@string/bottom_sheet_tap_cancel_request_hint"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <include layout="@layout/common_divider"/>
+
+        <TextView
+                style="@style/BottomFragmentSheetText"
+                android:id="@+id/bottomSheetAction"
+                android:text="@string/bottom_sheet_cancel_request"
+                android:paddingTop="@dimen/padding_margin_large_24"
+                android:paddingBottom="@dimen/padding_margin_large_30"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>

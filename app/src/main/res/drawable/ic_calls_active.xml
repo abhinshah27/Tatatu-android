@@ -1,0 +1,10 @@
+<vector android:height="20dp" android:viewportHeight="776"
+    android:viewportWidth="776" android:width="20dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h776v776h-776z M 0,0"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M410,687C371,662 286,597 214,526 140,451 85,376 59,337 29,297 -23,147 70,52 82,40 97,29 112,20 117,19 122,17 127,17 140,17 158,24 176,37 216,64 273,127 266,173 263,193 253,213 233,233 214,251 191,266 176,274L160,284 463,584 473,566C481,549 496,526 516,506 534,488 554,478 574,476 575,476 575,476 577,476 622,476 685,531 716,580 726,597 736,619 728,630 716,648 705,665 690,680 655,715 610,733 561,733 486,733 426,698 410,687Z"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+    </group>
+</vector>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_margin_medium_14"
+            android:paddingBottom="@dimen/padding_margin_small_8"
+            android:clipChildren="false">
+
+        <ImageView
+                android:id="@+id/roundAvatarImageView"
+                android:layout_width="@dimen/round_avatar_size"
+                android:layout_height="@dimen/round_avatar_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintTop_toTopOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintStart_toStartOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintEnd_toEndOf="@+id/roundAvatarMomentImageView"/>
+
+        <ImageView
+                android:id="@+id/roundAvatarMomentImageView"
+                android:layout_width="@dimen/round_avatar_moment_size"
+                android:layout_height="@dimen/round_avatar_moment_size"
+                app:srcCompat="@drawable/moment_background"
+                android:tint="?colorAccent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                style="@style/RoundAvatarTextView"
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder"
+                android:layout_marginTop="@dimen/padding_margin_small_8"
+                android:drawablePadding="@dimen/padding_margin_small_4"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintEnd_toStartOf="@+id/followStatusButtons"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="@+id/roundAvatarImageView"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="@+id/roundAvatarImageView"/>
+
+        <TextView
+                style="@style/RoundAvatarSecondaryTextView"
+                android:id="@+id/userFullNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintEnd_toStartOf="@+id/followStatusButtons"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/userNameTextView"/>
+
+        <ImageView
+                style="@style/FollowerTTUBadge"
+                android:id="@+id/followerTTUBadgeImageView"
+                android:layout_width="@dimen/follower_ttu_badge_size"
+                android:layout_height="@dimen/follower_ttu_badge_size"
+                app:srcCompat="@drawable/ic_ttu_token_flat"
+                app:layout_constraintTop_toBottomOf="@+id/userFullNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/userFullNameTextView"/>
+
+        <TextView
+                style="@style/FollowerTTUBalance"
+                android:id="@+id/followerTTUBalanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder"
+                app:layout_constraintTop_toTopOf="@+id/followerTTUBadgeImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/followerTTUBadgeImageView"
+                app:layout_constraintStart_toEndOf="@+id/followerTTUBadgeImageView"/>
+
+        <include
+                layout="@layout/follow_status_buttons"
+                android:id="@+id/followStatusButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Group android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/TTUGroup"
+        app:constraint_referenced_ids="followerTTUBadgeImageView,followerTTUBalanceTextView"
+        android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

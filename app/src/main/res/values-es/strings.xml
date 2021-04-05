@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    <string name="ttu_privacy">https://docs.google.com/gview?embedded=true&amp;url=http://52.90.66.170:5000/privacy_es.pdf</string>-->
+    <!--    <string name="ttu_tos">https://docs.google.com/gview?embedded=true&amp;url=http://52.90.66.170:5000/terms_es.pdf</string>-->
+
+
+    <!-- [START] Common -->
+
+    <string name="msg_press_back_to_exit">Presionar “regresar” para salir</string>
+    <string name="bottom_sheet_cancel">@string/action_cancel</string>
+    <string name="bottom_sheet_report">Reportar</string>
+    <string name="bottom_sheet_block">Bloquear</string>
+    <string name="bottom_sheet_edit">Editar</string>
+    <string name="bottom_sheet_delete">Eliminar</string>
+    <string name="bottom_sheet_copy_link">Copiar enlace</string>
+    <string name="bottom_sheet_inappropriate_post">Publicación inapropiada</string>
+    <string name="bottom_sheet_share">Compartir</string>
+    <string name="bottom_sheet_share_profile">Compartir este perfil</string>
+    <string name="bottom_sheet_share_as_post">Compartir como publicación</string>
+    <string name="bottom_sheet_share_as_message">Compartir como mensaje</string>
+    <string name="bottom_sheet_share_as_email">Compartir por correo electrónico</string>
+    <string name="bottom_sheet_tap_unfollow_hint">Toca Dejar de seguir para confirmar</string>
+    <string name="bottom_sheet_tap_cancel_request_hint">Toca Cancelar solicitud para confirmar</string>
+    <string name="bottom_sheet_cancel_request">Cancelar solicitud</string>
+    <string name="bottom_sheet_unfollow">Dejar de seguir</string>
+    <string name="no_results_found">No se encontraron resultados</string>
+    <string name="results_found_label">Resultados para %s </string>
+
+    <string name="number_multiplier_b_string">%sB</string>
+    <string name="number_multiplier_m_string">%sM</string>
+    <string name="number_multiplier_k_string">%sK</string>
+
+    <string name="share_with_label">Compartir con:</string>
+
+    <string name="date_min">%s minuto</string>
+    <string name="date_mins"> %s minutos</string>
+    <string name="date_hour">%s hora</string>
+    <string name="date_hours">%s horas</string>
+    <string name="date_day">%s día</string>
+    <string name="date_days">%s días</string>
+    <string name="date_month">%s mes</string>
+    <string name="date_months">%s meses</string>
+    <string name="date_year">%s año</string>
+    <string name="date_years">%s años</string>
+
+    <string name="action_share">Compartir</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_confirm">Confirmar</string>
+
+    <string name="dialog_progress_generic">Comunicación con los servidores TTU</string>
+    <string name="dialog_progress_generic_2">%s…</string>
+    <string name="progress_video_compress">Comprimir video %d%% </string>
+    <string name="progress_media_upload">Subiendo multimedia %d%% </string>
+
+    <string name="no_browser_apps">No se encontró ninguna aplicación de navegador en el dispositivo</string>
+
+    <string name="connection_acquired">Conexión de datos disponible</string>
+
+    <string name="progress_share">Generando enlace para compartir</string>
+
+    <!-- [END] Common -->
+
+
+    <!-- [START] Home -->
+
+    <string name="title_home">Inicio</string>
+    <string name="title_account">Cuenta</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_store">Tienda</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="action_follow">Seguir</string>
+    <string name="wfi_balance">Tu saldo</string>
+    <string name="wfi_friends">&lt;u>Amigos&lt;/u> </string>
+    <string name="wfi_invite">&lt;u>Invitar&lt;/u> </string>
+    <string name="home_title_posts">Publicaciones</string>
+    <string name="see_all"><![CDATA[<u>Ver todo</u>]]></string>
+    <string name="home_title_suggested">Sugerencia para ti</string>
+    <string name="action_add_post">Agregar publicación</string>
+    <string name="home_cat_movies">Películas</string>
+    <string name="home_cat_series">Series</string>
+    <string name="home_cat_games">Juegos</string>
+    <string name="home_cat_sports">Deportes</string>
+    <string name="home_cat_celeb">Celebridades</string>
+    <string name="home_cat_mvideos">Videos musicales</string>
+
+    <!-- [END] Home -->
+
+
+    <!-- [START] Profile -->
+
+    <string name="progress_profile">Buscando perfil</string>
+
+    <string name="profile_balance">Tu saldo</string>
+    <string name="profile_friends"><u>Amigos</u></string>
+    <string name="profile_invite"><u>Invitar</u></string>
+    <string name="profile_followers">Seguidores</string>
+    <string name="profile_following">Siguiendo</string>
+    <string name="profile_insights">Ver comentarios</string>
+    <string name="profile_donating">Estoy donando a</string>
+    <string name="profile_message">Mensaje</string>
+    <string name="profile_followback">Seguir de vuelta</string>
+    <string name="profile_follow">Seguir</string>
+    <string name="profile_requested">Solicitado</string>
+    <string name="profile_private">La actividad de este usuario es privada</string>
+    <string name="profile_posts">Publicaciones</string>
+    <string name="profile_tags">Etiquetas</string>
+    <string name="profile_moments">Momentos</string>
+    <string name="profile_edit">Editar perfil</string>
+    <string name="profile_invites">Invitados</string>
+
+    <string name="profile_menu_call">llamada</string>
+    <string name="profile_menu_new_call">nueva llamada</string>
+    <string name="profile_menu_video_call">videollamada</string>
+    <string name="profile_menu_settings">ajustes</string>
+    <string name="profile_menu_overflow">exceso</string>
+    <string name="profile_menu_more">más</string>
+
+    <string name="follow_earn_label">¿Cuánto puedo ganar?</string>
+    <string name="follow_requests_label">Solicitudes para seguir</string>
+    <string name="follow_search_friends_label">Buscar a tus amigos</string>
+    <string name="follow_search_invited_friends_label">Buscar a tus amigos invitados</string>
+    <string name="follow_search_followers_label">Buscar a tus seguidores</string>
+    <string name="follow_search_following_label">Buscar a los que sigues</string>
+    <string name="follow_search_requests_label">Buscar solicitudes para seguir</string>
+    <string name="follow_search_sent_requests_label">Buscar solicitudes para seguir enviadas</string>
+    <string name="follow_sent_requests_label">Solicitudes para seguir enviadas</string>
+
+    <string name="follow_no_friends_label">Aún no tienes amigos…\n ¡Anímate e invita a algunos!</string>
+    <string name="follow_no_friends_sub_label">Puedes ganar 12 TTU equivalentes a 3 USD\n  cuando tus amigos miran una película.</string>
+    <string name="follow_no_friends_button_label">INVITAR A AMIGOS</string>
+
+    <string name="follow_invite_hint_label">Solo puedes reenviar invitaciones una vez cada 7 días</string>
+
+    <string name="follow_requests_confirm">Confirmar</string>
+    <string name="follow_requests_delete_label">Eliminar</string>
+    <string name="follow_sent_requests_cancel_label">@string/action_cancel</string>
+    <string name="follow_invite_resend_label">Reenviar invitación</string>
+
+    <string name="placeholder">XXX</string>
+    <string name="placeholderLong">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="type_account_public_figure">Figura pública</string>
+    <string name="type_account_celebrity">Famosos</string>
+    <string name="type_account_charity">Organización benéfica</string>
+
+    <string name="follow_empty_list">¡Sin %s todavía!</string>
+
+    <string name="result_action_block">Se ha agregado a %s a tus perfiles bloqueados</string>
+    <string name="result_action_report">Se ha reportado a %s</string>
+    <string name="result_action_post_report">Se ha reportado esta publicación</string>
+    <string name="result_action_unfollow">Se ha dejado de seguir a %s</string>
+    <string name="result_action_cancel_request">Se ha cancelado la solicitud de seguimiento de %s</string>
+    <string name="profile_fetch_failed">No pudimos cargar el perfil del usuario. Vuelva a intentarlo más tarde.</string>
+
+    <string name="loader_fetching_posts">Buscando publicaciones</string>
+
+    <!-- [END] Profile -->
+
+
+    <!-- [START] Create Post -->
+
+    <!--Message-->
+    <string name="videoFailed">No se pudo grabar el video.</string>
+    <string name="videoCancel">Grabación de video cancelada</string>
+    <string name="content_not_available">Contenido no disponible</string>
+    <string name="msg_post_share">Selecciona el contenido que deseas compartir</string>
+    <string name="write_a_caption">Escribir una leyenda…</string>
+
+    <!--Toolbar-->
+    <string name="tb_new_post">Publicación nueva</string>
+    <string name="tb_update_post">Editar publicación</string>
+    <string name="tb_camera_roll">Galería</string>
+    <string name="tb_privacy_notice">Aviso de privacidad de TaTaTu</string>
+    <string name="tb_terms_of_use">Términos de uso de TaTaTu</string>
+
+    <!--Common-->
+    <string name="next">Siguiente</string>
+    <string name="video">Video</string>
+    <string name="photo">Foto</string>
+    <string name="library">Biblioteca</string>
+    <string name="transitionName">Imagen</string>
+    <string name="basic_internal_storage">Almacenamiento interno</string>
+    <string name="image_cropping">Recorte de imágenes no exitoso</string>
+    <string name="file_not_create">Archivo temporal no creado</string>
+
+    <!--Button-->
+    <string name="btn_publish">Publicar</string>
+    <string name="btn_edit_post_save">Guardar</string>
+
+    <string name="progress_post_create">Publicando tu publicación</string>
+    <string name="progress_post_edit">Guardando tu publicación</string>
+
+    <!-- [END] Create Post -->
+
+
+    <!-- [START] Invite Friends -->
+
+    <string name="tb_send">Enviar</string>
+    <string name="tb_cancel">@string/action_cancel</string>
+    <string name="btn_invite_link">Copiar</string>
+    <string name="tb_new_email">Nuevo correo electrónico</string>
+    <string name="btn_create_email">CREAR CORREO ELECTRÓNICO</string>
+    <string name="msg_link_copy">Enlace copiado en el portapapeles.</string>
+    <string name="demo_link">https://beta.tatatu.com/DHbg…</string>
+
+    <!--Tabs-->
+    <string name="tabs_LINK">ENLACE</string>
+    <string name="tabs_EMAIL">CORREO ELECTRÓNICO</string>
+    <string name="tabs_TWITTER">TWITTER</string>
+    <string name="tabs_CONTACT">CONTACTO</string>
+
+    <!--InviteFriends-->
+    <string name="inviteFriendsLinkTitle">Tu enlace de invitación es</string>
+    <string name="inviteTitle">Elige cómo te gustaría invitar</string>
+    <string name="inviteFriendsTextViewTitle">¿Cuánto puedo ganar?</string>
+    <string name="inviteFriendsLinkMessage">1. Copia el enlace anterior \n2. Dirígete a Facebook, Whatsapp, Instagram, Messenger o a cualquier otro lugar \n3. Pega el enlace \n4. Gana Coins cada vez que alguien que invitas mira</string>
+    <string name="inviteFriendsTextViewExpandable">Ganas aproximadamente 12 Coin TTU por cada película que miras. También ganas aproximadamente 12 Coin TTU por cada película que mira un amigo tuyo.\nEste cálculo se basa en una película de 100 minutos.\n\nY gane Coin TTU adicionales cada vez que a sus amigos y seguidores les guste, comenten y compartan sus fotos y videos.</string>
+    <string name="no_twitter_friends">0 AMIGOS DE TWITTER</string>
+    <string name="link_not_available">El enlace no está disponible. Vuelva a intentarlo más tarde.</string>
+
+    <!--Email-->
+    <string name="invite_contact">Invitar</string>
+    <string name="no_result_contacts">No se ha encontrado ningún contacto</string>
+    <string name="new_email_to_title">Para:</string>
+    <string name="email_Name_hint">Nombre completo</string>
+    <string name="new_email_from_title">De:</string>
+    <string name="email_Name_Title">Nombre completo</string>
+    <string name="invite_friend">Invitar a amigos</string>
+    <string name="in_development">En desarrollo</string>
+    <string name="email_Email_Title">Dirección de correo electrónico</string>
+    <string name="new_email_subject_title">Asunto:</string>
+    <string name="valid_name">Ingresa tu nombre completo</string>
+    <string name="new_email_from">usuario que envía el correo electrónico</string>
+    <string name="valid_email">Ingresa la dirección de correo electrónico</string>
+    <string name="new_email_subject">Comprueba esto: recompensas cuando miras películas, música, más</string>
+    <string name="new_email_body">¡Hola! \n\nDebes echar un vistazo a TaTaTu. \nPuedes mirar excelentes películas y videos musicales, y ganar 50 TTU al registrarte. \nTambién obtienes Coins TTU cuando miras contenido e invitas amigos a verlo. \n\nHaz clic en este enlace (o copia y pega) para registrarte en TaTaTu:\nhttps://27fk.app.link/htVtrbHPCV\n\nAtentamente.</string>
+    <string name="sms_body">¿Te gustaría ganar € 3 por cada película que miras?\n\nRegístrate ahora en </string>
+
+    <string name="msg_email">Invitación enviada correctamente.</string>
+    <string name="loader_email">Enviando correo electrónico…</string>
+    <string name="loader_link">Buscando enlace…</string>
+    <string name="loader_fetching_friends">Buscando amigos…</string>
+
+    <string name="msg_error_message">Obtener algún error </string>
+
+    <!-- [END] Invite Friends -->
+
+
+    <!-- [START] Settings-->
+
+
+    <string name="settings_color_theme">Tema de color</string>
+    <string name="settings_upgrade">Mejorar cuenta</string>
+    <string name="settings_verify_account">Verificar cuenta</string>
+    <string name="settings_choose_which">Elige qué notificaciones deseas</string>
+    <string name="settings_profile_privacy">Privacidad del perfil</string>
+    <string name="settings_block_profile">Perfiles bloqueados</string>
+    <string name="settings_privacy_notice">Política de privacidad</string>
+    <string name="settings_terms_of_use">Condiciones de uso</string>
+    <string name="settings_help_center">Centro de ayuda</string>
+    <string name="settings_public_figure">Figura pública</string>
+    <string name="settings_celebrity">Famosos</string>
+    <string name="settings_charity">Organización benéfica</string>
+    <string name="settings_select">Seleccionar…</string>
+    <string name="settings_unblock">Desbloquear</string>
+
+    <string name="msg_we_have_sent">Hemos enviado los formularios para completar \na tu correo registrado (%s)</string>
+    <string name="msg_you_can">Puedes cambiar el tema. Un tema oscuro es una IU con poca luz que muestra principalmente superficies oscuras.</string>
+    <string name="msg_if_you_have_one">Si tienes uno de este perfil, puedes seleccionarlo de forma gratuita y actualizar tu cuenta </string>
+    <string name="msg_you_can_get">Puedes comenzar con la verificación. \nTe enviaremos un correo electrónico con los \nrequisitos.</string>
+    <string name="msg_you_can_get_upgrade_account">Puedes comenzar con la verificación. \nTe enviaremos un correo electrónico con los requisitos.</string>
+    <string name="msg_settings_your">Establecer tu cuenta en privado significa que solo los seguidores que apruebas pueden ver tu perfil, fotos y videos.</string>
+    <string name="msg_complete_your_profile">¡Completa tu perfil ahora y gana %s TTU de inmediato!</string>
+
+    <string name="tb_settings">Ajustes</string>
+    <string name="tb_color_theme">Tema de color</string>
+    <string name="tb_profile_privacy">Privacidad del perfil</string>
+    <string name="tb_verify_account">Verificar cuenta</string>
+    <string name="tb_upgrade_account">Mejorar cuenta</string>
+    <string name="tb_upgrade_account_save">Guardar</string>
+    <string name="tb_notification_settings">Ajustes de las notificaciones</string>
+
+    <string name="btn_verify_now">Verificar ahora</string>
+    <string name="btn_ok">ACEPTAR</string>
+    <string name="btn_update_profile">Actualizar perfil</string>
+    <string name="btn_update_later">Actualizar más tarde</string>
+
+    <string name="switch_btn_dark_theme">Tema oscuro</string>
+    <string name="switch_btn_private_profile">Perfil privado</string>
+    <string name="switch_btn_enable_content">Habilitar notificaciones de contenido</string>
+    <string name="switch_btn_enable_all_in">Habilitar todas las notificaciones en la aplicación</string>
+    <string name="switch_btn_enable_all_push">Habilitar todas las notificaciones push</string>
+    <string name="switch_btn_enable_notifications">Habilitar las notificaciones cuando tus amigos se registren</string>
+    <string name="switch_btn_enable_notifications_when">Habilitar las notificaciones cuando ganes TTU \n de tus amigos</string>
+    <string name="block_profiles_not_found">Bloquear perfiles no encontrados</string>
+
+    <!-- [END] Settings-->
+
+
+    <!-- [START] Post -->
+
+    <string name="tb_post">Publicar</string>
+    <string name="tb_my_post">Mi publicación</string>
+    <string name="tb_all_posts">Todas las publicaciones</string>
+    <string name="tb_likes">Los Me gusta</string>
+    <string name="post_view_comments">Ver todos los comentarios</string>
+    <string name="post_see_translation">VER TRADUCCIÓN</string>
+    <string name="post_see_original">VER ORIGINAL</string>
+    <string name="post_news_label">Noticias</string>
+    <string name="post_comment_reply">Responder</string>
+    <string name="new_comment_hint">Escribe tu comentario</string>
+
+    <string name="post_ttu_balance_label">Ganado</string>
+
+    <!-- [END] Post -->
+
+
+    <!-- [START] UserAccess-->
+
+    <string name="msg_enter_country_code">Ingresa tu código de país</string>
+    <string name="msg_almost_don">¡Casi listo!</string>
+    <string name="msg_email_address">Dirección de correo electrónico</string>
+    <string name="msg_add_username">Agrega tu nombre de usuario</string>
+    <string name="msg_back_to_sign_in">VOLVER AL INICIO DE SESIÓN</string>
+    <string name="msg_login_success">¡Sesión iniciada con éxito!</string>
+    <string name="msg_enter_your_email">Ingresa tu dirección de correo electrónico</string>
+    <string name="msg_thrilled">¡Nos encanta que estés aquí!</string>
+    <string name="msg_validation_password">Contraseña no válida: 8 caracteres mínimo</string>
+    <string name="msg_validation_password_complete">Contraseña no válida: 8 caracteres mínimo, letras mayúsculas y minúsculas, números y caracteres especiales (@#!%*?&amp;+)</string>
+    <string name="msg_validation_mobile">Ingresa un numero de teléfono celular válido</string>
+    <string name="msg_you_have_already_account">¿Tienes una cuenta?</string>
+    <string name="msg_email_validation">Tu correo electrónico no es válido</string>
+    <string name="msg_enter_email">Ingresa tu dirección de correo electrónico</string>
+    <string name="msg_enter_password">Ingresa tu contraseña</string>
+    <string name="msg_enter_mobile">Ingresa tu teléfono celular</string>
+    <string name="msg_facebook_clicked">Abriendo Facebook</string>
+    <string name="msg_google_clicked">Abriendo Google</string>
+    <string name="msg_forgot">Solicitud enviada con éxito</string>
+    <string name="msg_sign_in_success">Inicio de sesión correcto</string>
+    <string name="msg_acknowledge">Reconozco que tengo más de 18 años de edad</string>
+    <string name="msg_validation_confirm_password">Ingresa una contraseña de confirmación válida</string>
+    <string name="msg_checkBox_Terms_and_Condition">Revisa los Términos y condiciones</string>
+    <string name="msg_confirm_password_match">La contraseña de confirmación no coincide</string>
+    <string name="msg_terms_condition">Acepto los Términos y condiciones y la Política de privacidad</string>
+    <string name="msg_tatatu_receive">Me gustaría recibir comunicaciones de marketing de TaTaTu</string>
+    <string name="msg_pickup_usename">Elige un nombre de usuario para tu perfil. Puedes siempre cambiarlo más adelante.</string>
+    <string name="msg_tatatu">Permito que TaTaTu comparta mis datos personales con terceros para recibir recomendaciones publicitarias y videos más relevantes</string>
+    <string name="choose_to">Elegir el navegador web</string>
+    <string name="msg_tc_terms">Términos y condiciones</string>
+    <string name="msg_tc_privacy">Política de privacidad</string>
+    <string name="choose_to_sms">Elegir SMS</string>
+
+    <string name="rb_login_email">Correo electrónico</string>
+    <string name="rb_login_mobile">Celular</string>
+
+    <string name="edt_login_password_title">Contraseña</string>
+    <string name="edt_login_email_title">Dirección de correo electrónico</string>
+    <string name="edt_login_mobile_title">Número de teléfono celular</string>
+    <string name="checkbox_login_remember_me">Recuérdame</string>
+
+    <string name="txt_login_or">O</string>
+    <string name="txt_login_google">Iniciar la sesión con Google</string>
+    <string name="txt_login_forgot">¿Olvidaste la contraseña?</string>
+    <string name="txt_login_facebook">Iniciar la sesión con Facebook</string>
+    <string name="txt_login_sign_up">¿No tienes una cuenta? </string>
+
+    <string name="btn_Log_in">INICIAR SESIÓN</string>
+    <string name="btn_sign_up">REGÍSTRATE</string>
+
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="sign_up_login"> LOG IN</string>
+    <string name="btn_Done">Listo</string>
+    <string name="sign_up"> SIGN UP</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="confirm_password">Confirmar la contraseña</string>
+    <string name="txt_signup_google">Registrarse con Google</string>
+    <string name="txt_signup_facebook">Registrarse con Facebook</string>
+    <string name="plus">+</string>
+    <string name="open_in_browser">Abrir en el navegador</string>
+    <string name="web_view_cancel">@string/action_cancel</string>
+    <string name="dialog_signup_email_message">Para continuar, debes verificar tu correo electrónico.</string>
+    <string name="dialog_signup_email_title">Verificar la dirección de correo electrónico</string>
+    <string name="dialog_signup_email_pos">Verificar</string>
+    <string name="dialog_signup_email_pos_2">Verificar ahora</string>
+    <string name="dialog_signup_email_neg">@string/action_cancel</string>
+
+
+    <string name="forgot_pwd_success_body">Te acabamos de enviar un correo electrónico para restablecer la contraseña.</string>
+    <string name="forgot_pwd_success_title">Recuperar la contraseña</string>
+    <string name="forgot_pwd_sending">Envío de correo electrónico de recuperación</string>
+
+    <string name="dialog_auth_10_minutes_title">Configuración de la cuenta</string>
+    <string name="dialog_auth_10_minutes_message">Tu cuenta se está configurando.\nInicia la sesión en 10 minutos.</string>
+
+    <string name="no_email_apps">No se encontró ninguna aplicación de correo electrónico en el dispositivo</string>
+    <string name="progress_login">Iniciando tu sesión</string>
+    <string name="progress_signup">Inscribiéndote</string>
+
+    <!-- [END] UserAccess-->
+
+
+    <!-- [START] Multimedia -->
+
+    <string name="video_duration">%s minuto</string>
+    <string name="video_duration_prural">%s minutos</string>
+    <string name="video_duration_second">%s segundo</string>
+    <string name="video_duration_second_prural">%s segundos</string>
+    <string name="watch_and_earn">Mira y gana hasta</string>
+    <string name="action_play">Reproducir</string>
+    <string name="video_detail_director">Director:</string>
+    <string name="video_detail_writers">Guión:</string>
+    <string name="video_detail_stars">Protagonistas:</string>
+
+    <!-- [END] Multimedia -->
+
+    <!-- [START] EditProfile -->
+
+    <string name="settings_ai">AI</string>
+    <string name="settings_bio">Bio</string>
+    <string name="settings_gender">Género</string>
+    <string name="settings_country">País</string>
+    <string name="settings_dob">Fecha de nacimiento</string>
+    <string name="settings_password">Contraseña</string>
+    <string name="settings_user_name">Nombre de usuario</string>
+    <string name="settings_full_name">Nombre completo</string>
+    <string name="settings_sign_out"><u>Cerrar sesión</u></string>
+    <string name="settings_phone_number">Número de teléfono</string>
+    <string name="settings_add_image"><u>Añadir imagen</u></string>
+    <string name="settings_change_image"><u>Cambiar imagen</u></string>
+    <string name="settings_email_address">Dirección de correo electrónico</string>
+    <string name="settings_personal_website">Sitio web personal</string>
+    <string name="settings_delete_profile"><u>Eliminar perfil</u></string>
+
+    <string name="title_email">¡Correo electrónico enviado!</string>
+    <string name="title_andreaiervolinoproducer">andreaiervolinoproducer</string>
+    <string name="title_edit_private_information">Editar información privada</string>
+    <string name="title_push_notification_settings">Ajustes de notificaciones push</string>
+    <string name="title_in_app_notification_settings">Ajustes de notificaciones en la aplicación</string>
+    <string name="title_you_have_not_completed">No has completado tu perfil</string>
+    <string name="title_dialog_delete">Eliminar el perfil</string>
+    <string name="title_dialog_log_out">Cerrar sesión</string>
+    <string name="title_choose">Elegir fuente de imagen</string>
+
+    <string name="settings_date">dd/mm/aaaa</string>
+    <string name="settings_select_language">Seleccionar idioma</string>
+    <string name="settings_notification_settings">Ajustes de notificaciones</string>
+
+    <string name="tb_edit_profile">Editar perfil</string>
+
+    <string name="btn_save_changes">GUARDAR CAMBIOS</string>
+    <string name="btn_dialog_delete">Eliminar</string>
+    <string name="btn_dialog_log_out">Cerrar sesión</string>
+    <string name="btn_dialog_cancel">Cancelar</string>
+    <string name="btn_discard_changes">DESCARTAR CAMBIOS</string>
+
+    <string name="setting_msg_error_full_name">Ingresa tu nombre completo</string>
+    <string name="setting_msg_error_user_name">Ingresa el nombre de usuario</string>
+    <string name="setting_msg_error_valid_bio">Ingresa el nombre de Bio</string>
+    <string name="setting_msg_error_personal_website">Ingresa el sitio web de la persona</string>
+    <string name="setting_msg_error_valid_personal_website">Ingresa el sitio web de la persona válida</string>
+    <string name="setting_msg_error_email">Ingresa el correo electrónico</string>
+    <string name="setting_msg_error_valid_email">Ingresa un correo electrónico válido </string>
+    <string name="setting_msg_error_password">Ingresa la contraseña </string>
+    <string name="setting_msg_error_valid_password">Ingresa una contraseña válida </string>
+    <string name="setting_msg_error_phone_no">Ingresa el número de teléfono</string>
+    <string name="setting_msg_error_valid_phone_no">Ingresa un número de teléfono válido</string>
+    <string name="setting_msg_error_valid_country">Selecciona un país</string>
+    <string name="setting_msg_error_valid_gender">Selecciona un género</string>
+    <string name="setting_msg_error_dob">Ingresa tu fecha de nacimiento</string>
+    <string name="setting_msg_error_valid_dob">Ingresa una fecha de nacimiento válida</string>
+    <string name="setting_msg_error_valid_dob_age">La edad debe ser mayor de 18 años.</string>
+    <string name="setting_msg_Successful">Guardar cambios con éxito</string>
+    <string name="setting_msg_dialog_delete">¿Estás seguro de que deseas eliminar este perfil?</string>
+    <string name="setting_msg_dialog_log_out">¿Seguro de que deseas cerrar la sesión?</string>
+    <string name="bottom_sheet_camera">Tomar una fotografía </string>
+    <string name="bottom_sheet_gallery">Elegir de la galería</string>
+    <string name="edit_profile_delete">Tu perfil se ha modificado con éxito</string>
+    <string name="edit_profile_logout">Sesión cerrada correctamente</string>
+    <string name="progress_profile_saving">Guardando tu perfil</string>
+
+    <string name="user_cancel">Cancelar acción</string>
+
+    <string name="skip">Omitir</string>
+
+    <!-- [END] EditProfile -->
+
+    <!-- [START] OnBoarding-->
+
+    <string name="btn_get_started">COMIENZA YA</string>
+    <string name="title_welcome">Bienvenido</string>
+
+    <string name="title_post_your_photos_and_videos">Publica tus fotos y videos</string>
+    <string name="title_better_than_free">Mejor que gratis</string>
+    <string name="title_earn_more_with_friends">Gana más con amigos</string>
+    <string name="title_redeem_ttu_tokens">Canjea Coins TTU</string>
+    <string name="sub_title_earn_ttu">Gana Coins TTU cada vez que obtengas un Me gusta, vistas, comentarios y se compartan tus contenidos</string>
+
+
+    <string name="sub_title_choose_from">Elige entre una gran selección de películas, series y videos musicales en una amplia gama de géneros</string>
+    <string name="sub_title_you_ll">Ganarás automáticamente nuestra TTU de criptomoneda cada vez que mires</string>
+    <string name="sub_title_invite_friends">Invita a amigos y gana Coins adicionales cada vez que ellos miren</string>
+    <string name="sub_title_receive_discount">Recibe descuentos en la tienda de TaTaTu</string>
+    <string name="tb_your_wallet_balance">Tu saldo de monedero</string>
+
+    <!-- [END] OnBoarding-->
+
+    <!-- [START] Wallet-->
+
+    <string name="tb_equivalent_to">Equivalente a</string>
+    <string name="title_your_crypto_wallet">Tu monedero</string>
+
+    <string name="title_what_is_this">¿Que es esto?</string>
+    <string name="des_here_you_can">Aquí puede ver la cantidad de Coin TTU que ha ganado viendo videos, invitando a sus amigos, obteniendo nuevos seguidores, Likes, vistas, comentarios o compartidos de sus publicaciones y ahora también recibir mensajes de texto, videollamadas y llamadas de voz.\n\nPuede canjear Coin TTU haciendo clic en “Canjear ahora”.\n\nTendrá acceso directo a nuestra tienda en línea para elegir y comprar los productos adecuados para usted.\n\nLe recordamos que por el momento puede usar sus Coin TTU única y exclusivamente en el sitio web www.tatatuecommerce.com\n\nA continuación se muestra el saldo de TTU que ganó como recompensa.\n\nTambién puede usar su billetera para enviar Coin TTU a sus familiares y amigos que pueden gastarlas en nuestra tienda en línea.</string>
+
+    <string name="account_balance">Saldo de cuenta</string>
+
+
+    <string name="equivalent_to">Equivalente a</string>
+    <string name="if_you_have_recently">Si recientemente realizaste o recibiste una transferencia de TTU, es posible que aún no esté reflejada en el Saldo de tu cuenta</string>
+    <string name="usd">USD </string>
+    <string name="demo_balance">200,19</string>
+    <string name="demo_convert_balance">$ 50,04</string>
+    <string name="btn_done">Listo</string>
+
+    <string name="btn_redeem_now">CANJEAR AHORA</string>
+    <string name="btn_view_wallet">VER MONEDERO</string>
+
+    <string-array name="Gender">
+        <item>Género…</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="Equivalent">
+        <item>USD</item>
+        <item>EURO</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>GBP</item>
+        <item>JPY</item>
+    </string-array>
+
+    <!-- [END] Wallet-->
+
+
+    <!-- [START] Search -->
+
+    <string name="search_label_users">Usuarios</string>
+    <string name="search_label_media">Media</string>
+
+    <!-- [END] Search -->
+
+
+    <string name="loader_fetching_friends_invited">Buscando amigos invitados</string>
+    <string name="tb_notification">Notificaciones</string>
+    <string name="loader_fetching_follow">Buscando…</string>
+    <string name="type_account_channel">Canal</string>
+    <string name="no_result_notifs">No se ha encontrado ningúna notificación</string>
+    <string name="post_comments">Comentarios</string>
+    <string name="post_shares">Compartidos</string>
+
+
+    <!--[START] Calls-->
+
+    <string name="error_calls_video">Lo sentimos, no pudimos conectarnos al video de la otra persona</string>
+    <string name="error_calls_connection">Lo sentimos, no pudimos conectarnos con la otra persona. Inténtalo de nuevo.</string>
+    <string name="calls_timer_disconnecting_num">tiempo de espera alcanzado.\n Desconectando en %d…</string>
+    <string name="error_calls_start">Llamar al servicio actualmente no disponible</string>
+    <string name="calls_user_action_mute">%s apagó el micrófono</string>
+    <string name="calls_user_action_unmute">%s enciende el micrófono</string>
+
+    <string name="action_calls_hangup">Colgar</string>
+    <string name="action_calls_accept">Aceptar</string>
+    <string name="action_calls_decline">Rechazar</string>
+    <string name="action_calls_speaker">Altavoz</string>
+    <string name="action_calls_earpiece">Auricular</string>
+    <string name="action_calls_mute">Mudo</string>
+    <string name="action_calls_un_mute">Dejar de silenciar</string>
+
+    <string name="call_declined">Llamada rechazada</string>
+    <string name="call_connecting">Conectando…</string>
+    <string name="call_connected">Conectado</string>
+    <string name="call_connection_lost_reconnecting">Conexión perdida. Reconectando…</string>
+    <string name="not_able_to_connect_the_call">No se puede conectar la llamada. Cerrando la llamada.</string>
+    <string name="call_ringing">Está sonando…</string>
+    <string name="error_calls_busy">%s Actualmente está ocupado con otra conversación.\n\n nténtalo más tarde.</string>
+    <string name="calls_missed_from">MLlamada perdida de %s</string>
+    <string name="loading_call">Estoy llamando a %s</string>
+
+    <string name="notif_channel_calls_description">Canal de notificación TaTaTu para llamadas entrantes y salientes</string>
+
+    <string name="calls_status_incoming">Llamada entrante</string>
+    <string name="calls_status_outgoing">Llamada saliente</string>
+    <string name="calls_status_Ringing">Está sonando</string>
+    <string name="call_tatatu_voice">LLAMADA TATATU DE VOZ</string>
+    <string name="call_tatatu_video">LLAMADA TATATU DE VIDEO</string>
+
+    <string name="call_notif_body_inc_vc">Llamada de voz entrante</string>
+    <string name="call_notif_body_inc_vd">Llamada de video entrante</string>
+    <string name="call_notif_body_out_vc">Llamada de voz saliente</string>
+    <string name="call_notif_body_out_vd">Llamada de video saliente</string>
+    <string name="call_notif_title">Llamada %s</string>
+
+    <string name="calls_dialog_switch_message">%s está cambiando a una llamada de video.\n\nQuieres encender tu video?</string>
+    <string name="calls_dialog_switch_title">Cambiar a llamada de video</string>
+
+    <string name="call_disclaimer_encryption">Esta llamada está encriptada de extremo a extremo para su máxima privacidad</string>
+
+    <!-- [END] Calls-->
+
+
+    <!--[START] Chat -->
+
+    <string name="notif_channel_chat_unsent_description">Canal de notificaciones TaTaTu para información sobre mensajes de chat no enviados</string>
+    <string name="notif_channel_chat_description">Canal de notificación TaTaTu para mensajes entrantes</string>
+
+    <string name="bottom_sheet_export">Exportar</string>
+    <string name="bottom_sheet_video">Grabar un video</string>
+
+    <string name="title_chats_and_calls">Chats y llamadas</string>
+    <string name="title_selected_chats_and_calls">%d Chats y llamadas seleccionadas</string>
+    <string name="title_new_call">Nueva llamada</string>
+    <string name="title_new_chat">Nueva Chat</string>
+    <string name="chats_exported">Los chats seleccionados se están exportando.\nRecibirá un correo electrónico con los chats deseados.</string>
+    <string name="chat_box_hint">Escribe tu mensaje</string>
+
+    <string name="chat_earning_text_msg">Usted ganó</string>
+    <string name="chat_earning_text_room">(Ganancias totales de chat y llamadas)</string>
+
+    <string name="chat_text_incoming_missed_video">Llamada Video perdida</string>
+    <string name="chat_text_incoming_missed_voice">Llamada de voz perdida</string>
+    <string name="chat_text_outgoing_missed_video">Llamada Video no contestada</string>
+    <string name="chat_text_outgoing_missed_voice">Llamada de voz no contestada</string>
+
+    <string name="chat_missed_call_back">Volver a llamar</string>
+
+    <string name="chat_room_first_line_picture_out">U+1F4F7 Foto</string>
+    <string name="chat_room_first_line_video_out">U+1F3A5 Video</string>
+    <string name="chat_room_first_line_picture_in">te envió U+1F4F7</string>
+    <string name="chat_room_first_line_video_in">te envió U+1F3A5</string>
+    <string name="chat_message_status_error">¡Vaya, no pudimos enviarlo! Toque el mensaje para volver a intentar</string>
+    <string name="chat_message_status_sending">Enviando</string>
+    <string name="chat_activity_typing">esta escribiendo…</string>
+
+    <string name="no_result_chat_rooms">Aún no hay salas de chat abiertas</string>
+    <string name="no_result_chat_rooms_search">No hay salas de chat que cumplan los criterios</string>
+    <string name="no_result_chat_creation">No hay salas de chat disponibles</string>
+
+    <string name="notification_unsent_messages_title">Mensajes de chat no enviados</string>
+    <string name="notification_unsent_messages_text">Tiene algunos mensajes que no pudimos enviar.\nToque para abrir la sección Chat.</string>
+    <string name="chat_notification_text_below_24">Tienes nuevos mensajes de chat</string>
+
+    <string name="error_chat_rooms_no_selection">No hay salas de chat seleccionadas</string>
+
+    <!--[END] Chat-->
+
+
+</resources>

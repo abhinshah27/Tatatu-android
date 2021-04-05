@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/selector_background_item_selected"
+        android:padding="@dimen/padding_margin_default"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_margin_small_6"
+            app:layout_constraintBottom_toBottomOf="@+id/picturePlusIndicator"
+            app:layout_constraintTop_toTopOf="@+id/picturePlusIndicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/custom_checkbox_chat" />
+
+
+        <include
+            android:id="@+id/picturePlusIndicator"
+            layout="@layout/common_profile_picture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toEndOf="@+id/checkbox"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatRoomName"
+            style="@style/Bold16"
+            android:textColor="?chatTextPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_margin_medium_12"
+            android:layout_marginEnd="@dimen/padding_margin_medium_12"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@id/chatText"
+            app:layout_constraintEnd_toStartOf="@+id/chatLastSeen"
+            app:layout_constraintStart_toEndOf="@+id/picturePlusIndicator"
+            app:layout_constraintTop_toTopOf="@+id/picturePlusIndicator"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Stefano Galizia ANDRIID" />
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/chatText"
+            style="@style/Regular14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/ttu_lightgray"
+            app:layout_constraintBottom_toBottomOf="@+id/picturePlusIndicator"
+            app:layout_constraintEnd_toEndOf="@+id/chatRoomName"
+            app:layout_constraintStart_toStartOf="@+id/chatRoomName"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomName"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/chatLastSeen"
+            style="@style/Regular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="?chatTextSecondary"
+            app:layout_constraintBottom_toBottomOf="@+id/picturePlusIndicator"
+            app:layout_constraintEnd_toStartOf="@+id/toReadCount"
+            app:layout_constraintTop_toTopOf="@+id/picturePlusIndicator"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/chevron"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="@dimen/padding_margin_small_6"
+            android:tint="?textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/picturePlusIndicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/picturePlusIndicator"
+            app:srcCompat="@drawable/ic_signup_right_indicator" />
+
+        <TextView
+            android:id="@+id/toReadCount"
+            style="@style/Bold11"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_circle_orange"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/picturePlusIndicator"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/chevron"
+            app:layout_constraintTop_toTopOf="@+id/picturePlusIndicator"
+            tools:text="1" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/earningGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="earningText,earningToken,earningValue"/>
+
+        <TextView
+            android:id="@+id/earningText"
+            style="@style/Regular11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/chat_earning_text_room"
+            android:textColor="?chatTextSecondary"
+            android:layout_marginStart="@dimen/padding_margin_small_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/earningValue"
+            app:layout_constraintTop_toBottomOf="@id/picturePlusIndicator" />
+
+        <ImageView
+            android:id="@+id/earningToken"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            app:layout_constraintStart_toStartOf="@+id/chatRoomName"
+            app:layout_constraintEnd_toStartOf="@+id/earningValue"
+            app:layout_constraintStart_toEndOf="@id/earningText"
+            app:layout_constraintTop_toTopOf="@+id/earningText"
+            app:layout_constraintBottom_toBottomOf="@id/earningText"
+            app:srcCompat="@drawable/ic_ttu_token_flat" />
+
+        <TextView
+            android:id="@+id/earningValue"
+            style="@style/Regular12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?chatTextPrimary"
+            android:layout_marginStart="@dimen/padding_margin_small_4"
+            app:layout_constraintStart_toEndOf="@id/earningToken"
+            app:layout_constraintTop_toTopOf="@+id/earningText"
+            app:layout_constraintBottom_toBottomOf="@id/earningText"
+            tools:text="0.01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

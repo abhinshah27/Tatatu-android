@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?colorPrimary" />
+        </shape>
+    </item>
+    <item
+        android:width="13dp"
+        android:height="13dp"
+        android:gravity="center"
+        tools:ignore="UnusedAttribute">
+        <shape android:shape="oval">
+            <solid android:color="?colorAccent" />
+            <size
+                android:width="13dp"
+                android:height="13dp" />
+        </shape>
+    </item>
+</layer-list>

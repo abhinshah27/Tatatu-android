@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_no_results_found"
+            style="@style/LargeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/no_result_notifs"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/padding_margin_default"
+            android:layout_marginEnd="@dimen/padding_margin_default"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_srl"
+            app:layout_constraintEnd_toEndOf="@+id/notification_srl"
+            app:layout_constraintStart_toStartOf="@+id/notification_srl"
+            app:layout_constraintTop_toTopOf="@+id/notification_srl" />
+
+
+        <include
+                android:id="@+id/tb_motification"
+                layout="@layout/common_toolbar_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout
+                android:id="@+id/notification_srl"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tb_motification">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:theme="?android:attr/progressBarStyleLarge"
+            android:id="@+id/notificationProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data class="NotificationMainViewModelBinding">
+
+        <variable
+            name="mViewModel"
+            type="rs.highlande.app.tatatu.feature.notification.view.viewModel.NotificationViewModel" />
+    </data>
+</layout>

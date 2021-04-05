@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--EditText-->
+    <style name="edtSettingsCommonEmail">
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/state_text_default</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">?inviteFriendsTitle</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+    </style>
+
+    <style name="edtSettingsCommonEditTextComment">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scroll_color</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollview_thumb</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start</item>
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:textColorHint">?inviteFriendsTitle</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+    </style>
+
+    <style name="edtSettingsCommonEditTextSelect">
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato_ltalic</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">?inviteFriendsTitle</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:textColor">?inviteFriendsTitle</item>
+    </style>
+
+    <!--Spinner-->
+    <style name="SpinnerCommonSettings" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato_ltalic</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColorHint">?inviteFriendsTitle</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:textColor">?inviteFriendsTitle</item>
+    </style>
+
+
+    <style name="SpinnerCommonSettingsItem">
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato_ltalic</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">?inviteFriendsTitle</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">?inviteFriendsTitle</item>
+    </style>
+
+    <!--DatePicker-->
+    <style name="MyTimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--TextView-->
+    <style name="txtSettingsProfileName">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="txtSettingsEditTextTitle">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="txtSettingsAddImageTitle">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">?txtUnderLine</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="txtSettingsAi">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:textColor">?preloadingIcon</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="txtImageDialog">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="clImageDialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="txtVerifyTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="txtCompleteTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="txtBlockProfilesNotFound">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_heavy</item>
+    </style>
+
+
+    <style name="txtVerifySubTitle">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="txtPrivacySubTitle">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+    </style>
+
+
+    <style name="txtUpgradeAccountSubTitle">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+    </style>
+
+    <style name="txtNotificationSettings">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+    </style>
+
+    <!--ImageView-->
+    <style name="imgSettingsProfile">
+        <item name="android:layout_height">@dimen/dp_70</item>
+        <item name="android:layout_width">@dimen/dp_70</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/dp_4</item>
+        <item name="android:background">@drawable/ic_settings_profile</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_14</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_large_24</item>
+    </style>
+
+    <style name="imgUpgradeAccount">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="srcCompat">@drawable/ic_checked</item>
+        <item name="android:paddingTop">@dimen/dp_18</item>
+        <item name="android:paddingBottom">@dimen/dp_18</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <!--Button-->
+    <style name="btn_save_changes">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_login</item>
+        <item name="android:textColor">?loginTextBtn</item>
+        <item name="android:fontFamily">@font/lato_heavy</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="btn_discard_changes">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_discard_changes</item>
+        <item name="android:textColor">?buttonTextColorPrimary</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <!--Switch-->
+
+    <style name="switch_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+
+</resources>

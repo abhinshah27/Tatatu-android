@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="person" type="rs.highlande.app.tatatu.model.SuggestedPerson"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    android:background="@drawable/default_ripple_inverted">
+
+        <include layout="@layout/common_profile_picture"
+                 android:id="@+id/profilePicture"
+                 android:layout_width="@dimen/home_suggested_picture" android:layout_height="0dp"
+                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintDimensionRatio="h,1:1"
+                 tools:srcCompat="@tools:sample/avatars[3]"/>
+
+        <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                style="@style/LabelTitle.HomeSuggested"
+                android:text="@{person.username}"
+                tools:text="alecbaldwin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/profilePicture"/>
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                style="@style/LabelSubtitle.HomeSuggested"
+                android:text="@{person.name}"
+                tools:text="Alec Baldwin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName"/>
+
+        <TextView
+                android:id="@+id/btnFollow"
+                style="@style/DefaultButton.Accent.NoCaps.Follow"
+                android:layout_marginTop="@dimen/home_suggested_button_margin_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--EditTextViewStyle-->
+    <style name="inviteFriendsTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:textColor">?inviteFriendsTitle</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">start|center</item>
+    </style>
+
+ <style name="inviteFriendsExpandableText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:textColor">?inviteFriendsExpandableText</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+
+ <style name="inviteFriendsExpandableTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:gravity">start|left</item>
+    </style>
+
+    <style name="inviteFriendsText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="textInviteLink">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="btnInviteLinkCopy">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/invite_friend_button_copy</item>
+        <item name="android:backgroundTint">?walletInviteButtonBackground</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:layout_marginStart">@dimen/dp_6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/dp_26</item>
+        <item name="android:paddingTop">@dimen/dp_18</item>
+        <item name="android:paddingEnd">@dimen/dp_26</item>
+        <item name="android:paddingBottom">@dimen/dp_16</item>
+        <item name="android:text">@string/btn_invite_link</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">?walletInviteColor</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    
+    <style name="txtInviteLinkDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:lineSpacingExtra">@dimen/dp_4</item>
+    </style>
+
+    <style name="txtInviteEmailTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txtInviteEmailCancel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txtInviteNewEmailTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="txtInviteEmailSend">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">?inviteFriendsEmailSend</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txtInviteEmailNew">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">?postBottomNavItemNormal</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txtInviteContact">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">@dimen/dp_20</item>
+        <item name="android:paddingEnd">@dimen/dp_20</item>
+    </style>
+
+    <style name="edtEmail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/invite_friend_background</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:textColorHint">?toolbarTitle</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="edtEmailNew">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="edtEmailSubject">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:inputType">textEmailSubject|textMultiLine</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <style name="edtEmailBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="btnInviteContact">
+        <item name="android:layout_width">@dimen/dp_108</item>
+        <item name="android:layout_height">@dimen/dp_38</item>
+        <item name="android:background">@drawable/btn_login</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:layout_marginStart">@dimen/dp_6</item>
+        <item name="android:text">@string/invite_contact</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/ttu_whitethree</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="tabCustomText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="dialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PostUserNameTextView" parent="@style/Bold16">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_12</item>
+        <item name="android:paddingEnd">@dimen/padding_margin_small_8</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="PostAgeTextView" parent="@style/Regular14">
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_small_4</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="PostLocationTextView" parent="@style/Regular14">
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="PostUserAvatarImageView">
+        <item name="android:layout_marginTop">@dimen/padding_margin_large_24</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostOptionsImageView">
+        <item name="android:layout_marginEnd">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostImageView">
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_12</item>
+    </style>
+
+    <style name="PostIconImageView">
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostIconImageView.Like">
+        <item name="android:tint">@color/accent_icon_color</item>
+    </style>
+
+    <style name="PostIconImageView.Comment">
+        <item name="android:layout_marginStart">@dimen/dp_32</item>
+    </style>
+
+    <style name="CommentIconImageView">
+        <item name="android:layout_marginTop">@dimen/padding_margin_large_24</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="CommentIconImageView.Like">
+        <item name="android:tint">@color/accent_icon_color</item>
+    </style>
+
+
+    <style name="PostShareIconImageView" parent="PostIconImageView">
+        <item name="android:layout_marginEnd">@dimen/padding_margin_medium_16</item>
+        <item name="android:tint">?iconColorNormal</item>
+    </style>
+
+    <style name="PostTitleTextView" parent="@style/Bold20">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_large_24</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="PostBodyTextView" parent="BasePostTextView">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_14</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_medium_14</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="PostItemViewCommentsTextView" parent="@style/Regular14">
+        <item name="android:text">@string/post_view_comments</item>
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:paddingTop">@dimen/padding_margin_small_10</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_14</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostItemTranslateTextView" parent="@style/Regular12">
+        <item name="android:text">@string/post_see_translation</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:paddingTop">@dimen/padding_margin_medium_12</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginBottom">@dimen/dp_46</item>
+    </style>
+
+    <style name="BasePostTextView"  parent="@style/Regular14">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:paddingTop">@dimen/dp_15</item>
+        <item name="android:paddingBottom">@dimen/dp_15</item>
+    </style>
+
+    <style name="PostCountTextView" parent="BasePostTextView">
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostCountTextView.Label">
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_small_4</item>
+    </style>
+
+    <style name="CommentCountTextView" parent="PostCountTextView">
+        <item name="android:paddingEnd">@dimen/padding_margin_large_24</item>
+    </style>
+
+    <style name="PostShareCountTextView" parent="BasePostTextView">
+        <item name="android:layout_marginEnd">@dimen/padding_margin_small_4</item>
+    </style>
+
+    <style name="PostShareCountTextView.Label">
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:layout_marginEnd">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostNewsTextView" parent="@style/Regular14">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">?textColorPrimaryInverted</item>
+        <item name="android:paddingTop">@dimen/dp_2</item>
+        <item name="android:paddingBottom">@dimen/dp_2</item>
+        <item name="android:paddingStart">@dimen/dp_4</item>
+        <item name="android:paddingEnd">@dimen/dp_4</item>
+    </style>
+
+    <style name="PostCommentUserAvatarImageView">
+    </style>
+
+    <style name="CommentUnderBoxText" parent="@style/Regular14">
+        <item name="android:textColor">?textColorSecondary</item>
+        <item name="android:paddingTop">@dimen/padding_margin_small_6</item>
+        <item name="android:paddingBottom">@dimen/dp_36</item>
+    </style>
+
+    <style name="PostCommentUserAvatarMomentImageView">
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostCommentUserNameTextView" parent="@style/Bold16">
+        <item name="android:layout_marginStart">@dimen/padding_margin_large_30</item>
+        <item name="android:paddingStart">@dimen/padding_margin_medium_12</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <style name="PostCommentBodyTextView" parent="@style/Regular14">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:layout_marginEnd">@dimen/padding_margin_large_30</item>
+        <item name="android:paddingTop">@dimen/padding_margin_medium_18</item>
+        <item name="android:paddingStart">@dimen/padding_margin_medium_12</item>
+        <item name="android:gravity">start|bottom</item>
+    </style>
+
+    <style name="CommentUnderBoxText.Age">
+        <item name="android:paddingStart">@dimen/padding_margin_medium_12</item>
+    </style>
+
+    <style name="CommentUnderBoxText.Reply">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:paddingEnd">@dimen/padding_margin_medium_16</item>
+        <item name="android:text">@string/post_comment_reply</item>
+    </style>
+
+    <style name="NewCommentBackground">
+        <item name="android:background">?lightBackground</item>
+    </style>
+
+    <style name="NewCommentTopDivider">
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginEnd">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="NewCommentAvatar">
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_18</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_large_28</item>
+    </style>
+
+    <style name="NewCommentEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:textColorHint">?textColorSecondary</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxHeight">@dimen/new_comment_box_max_height</item>
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_small_10</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_large_28</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scroll_color</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollview_thumb</item>
+    </style>
+
+    <style name="PostBalanceImageView">
+        <item name="android:layout_width">@dimen/follower_ttu_badge_size</item>
+        <item name="android:layout_height">@dimen/follower_ttu_badge_size</item>
+        <item name="android:layout_marginStart">@dimen/padding_margin_small_6</item>
+    </style>
+
+    <style name="PostBalanceTextView" parent="@style/Regular14">
+        <item name="android:textColor">?buttonColorPrimaryInverted</item>
+    </style>
+
+    <style name="PostBalanceTextView.Label">
+        <item name="android:layout_marginStart">@dimen/padding_margin_medium_16</item>
+    </style>
+
+    <style name="PostBalanceTextView.Balance">
+        <item name="android:layout_marginStart">@dimen/padding_margin_small_6</item>
+    </style>
+
+</resources>

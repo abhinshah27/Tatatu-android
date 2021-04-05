@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_post_preview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_84"
+        android:layout_gravity="bottom"
+        style="@style/BackgroundLight"
+        android:gravity="center|end">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_video"
+            style="@style/BtnPreviewPostRed"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:textAllCaps="true"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:elevation="@dimen/dp_0"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_publish"/>
+
+</LinearLayout>

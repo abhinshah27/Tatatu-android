@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultToolbar"
+    android:fitsSystemWindows="true"
+    app:layout_collapseMode="pin"
+    app:layout_collapseParallaxMultiplier="0.8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_tb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_toolbar"
+            android:padding="@dimen/padding_margin_small_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txt_tb_title"
+            style="@style/TextViewToolbarTitle"
+            android:background="?selectableItemBackground"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawablePadding="@dimen/padding_margin_small_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_tb_back"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_tb_next"
+            style="@style/TextViewSubTitle"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_margin_small_8"
+            android:layout_marginBottom="@dimen/padding_margin_small_8"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding_margin_large_20"
+            android:paddingEnd="@dimen/padding_margin_large_20"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_folder_list"
+            style="?android:attr/spinnerItemStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:background="?colorPrimary"
+            android:overScrollMode="never"
+            android:popupElevation="@dimen/dp_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txt_tb_title"
+            app:layout_constraintStart_toStartOf="@id/txt_tb_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

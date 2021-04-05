@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--TextInputLayout-->
+    <style name="TextInputLayoutAppearance">
+        <item name="colorPrimary">?attr/hintPreview</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">?hintPreview</item>
+        <item name="android:textColorHint">?hintPreview</item>
+        <item name="colorControlActivated">?hintPreview</item>
+        <item name="colorControlHighlight">?hintPreview</item>
+        <item name="android:textColor">@color/ttu_black</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ErrorText" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/ttu_red</item>
+    </style>
+
+    <style name="HintText" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/ttu_charcoal</item>
+    </style>
+
+    <style name="CommonTextInputLayout">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:background">?loginInputBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:theme">@style/TextInputLayoutAppearance</item>
+    </style>
+
+    <style name="CommonPasswordTextInputLayout">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:background">?loginInputBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:theme">@style/TextInputLayoutAppearance</item>
+        <item name="passwordToggleDrawable">@drawable/show_password_selector</item>
+
+    </style>
+
+    <!--EditText-->
+    <style name="CommonTextInputEditText">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_0</item>
+        <item name="android:paddingStart">@dimen/dp_0</item>
+        <item name="android:layout_marginBottom">@dimen/dp_12</item>
+        <item name="android:paddingTop">@dimen/dp_40</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?loginInputBackground</item>
+        <item name="android:textColorHint">?attr/hintPreview</item>
+    </style>
+
+
+    <!--RadioButton-->
+    <style name="RadioButtonSelector" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:button">@drawable/radio_button_selector</item>
+    </style>
+
+    <style name="loginRadioButton">
+        <item name="android:padding">@dimen/dp_6</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/radio_button_selector</item>
+        <item name="android:textColor">@drawable/radio_button_text_selector</item>
+    </style>
+
+    <!--CheckBox-->
+    <style name="CheckboxRemember">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="CheckboxTermsConditions">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:gravity">start</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:minWidth">@dimen/dp_0</item>
+        <item name="android:minHeight">@dimen/dp_0</item>
+    </style>
+
+    <style name="SignUpWelcomeText">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/signUpTitle</item>
+    </style>
+
+    <style name="SignUpWeThrilledText">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+    </style>
+
+
+    <!--TextView-->
+    <style name="ForgotPassword">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">end|center</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="TermsAndConditionPrivacyPolicy">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+    </style>
+
+    <style name="WelcomeScreen">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <style name="GoogleAndFacebook">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_medium</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+    </style>
+
+    <style name="YouHaveNotAccount">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/hintPreview</item>
+    </style>
+
+    <style name="BackToLogin">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/lato_semi_bold</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <!--Button-->
+    <style name="Login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_login</item>
+        <item name="android:textColor">?loginTextBtn</item>
+        <item name="android:fontFamily">@font/lato_heavy</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="BottomSheetWebView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_60</item>
+        <item name="android:background">@drawable/btn_webview_selector</item>
+        <item name="android:textColor">?btn_web_view</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

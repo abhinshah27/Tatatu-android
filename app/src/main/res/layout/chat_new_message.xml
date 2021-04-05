@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="rs.highlande.app.tatatu.feature.chat.view.viewModel.ChatMessagesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/NewCommentBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_margin_small_10"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:descendantFocusability="beforeDescendants">
+
+        <include
+                android:id="@+id/divider"
+                layout="@layout/common_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+                android:id="@+id/profilePicture"
+                style="@style/NewChatMessageAvatar"
+                layout="@layout/common_profile_picture"
+                android:layout_width="@dimen/post_avatar_size"
+                android:layout_height="@dimen/post_avatar_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars[3]" />
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+                android:id="@+id/messageBox"
+                style="@style/NewChatMessageEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/chat_box_hint"
+                android:text="@={viewModel.messageObservable}"
+                app:layout_constraintEnd_toStartOf="@+id/btnPlus"
+                app:layout_constraintStart_toEndOf="@+id/profilePicture"
+                app:layout_constraintTop_toTopOf="@id/profilePicture"/>
+
+        <ImageView
+                android:id="@+id/btnActionCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_margin_small_8"
+                android:paddingStart="@dimen/padding_margin_small_8"
+                app:layout_constraintBottom_toBottomOf="@id/btnSend"
+                app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/btnPlus"
+                app:layout_constraintTop_toTopOf="@id/btnSend"
+                app:srcCompat="@drawable/ic_chat_camera" />
+
+
+        <!-- INFO: 2019-12-24    Attachment button currently stays HIDDEN -->
+        <ImageView
+                android:id="@+id/btnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_margin_small_8"
+                android:paddingStart="@dimen/padding_margin_small_8"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btnSend"
+                app:layout_constraintEnd_toStartOf="@+id/btnActionCamera"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/messageBox"
+                app:layout_constraintTop_toTopOf="@id/btnSend"
+                app:srcCompat="@drawable/ic_chat_attachment" />
+
+        <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="@dimen/new_comment_button_radius"
+                android:layout_height="@dimen/new_comment_button_radius"
+                android:layout_marginEnd="@dimen/padding_margin_medium_18"
+                android:background="@drawable/common_selector_round_button_accent"
+                android:padding="@dimen/padding_margin_small_8"
+                android:layout_marginStart="7dp"
+                android:tint="@color/post_coment_button_text_color"
+                app:layout_constraintBottom_toBottomOf="@+id/profilePicture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnActionCamera"
+                app:layout_constraintTop_toTopOf="@+id/profilePicture"
+                app:srcCompat="@drawable/ic_arrow_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

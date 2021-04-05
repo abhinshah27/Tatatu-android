@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HomeTextAction" parent="Regular14">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textColor">@color/ttu_d_text_action</item>
+    </style>
+
+    <style name="HomePostLabelTitleNew" parent="LabelTitle.HomePost">
+        <item name="android:textColor">@color/ttu_d_text_new_item</item>
+    </style>
+
+    <style name="HomeSectionStreaming">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_margin_large_28</item>
+        <item name="android:paddingBottom">@dimen/padding_margin_large_28</item>
+        <item name="android:background">@color/ttu_d_background_streaming</item>
+    </style>
+
+    <style name="HomeStreamingLabel" parent="Regular12">
+        <item name="android:layout_height">14dp</item>
+        <item name="android:textColor">@color/ttu_d_text_new_item</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">gravity</item>
+    </style>
+
+</resources>

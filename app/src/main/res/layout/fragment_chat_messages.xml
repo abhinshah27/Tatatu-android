@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/containerChat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomActions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerParticipant"/>
+
+    <include layout="@layout/common_toolbar_back_picture"
+            android:id="@+id/containerParticipant"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/toBottomBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="270"
+            android:layout_marginEnd="@dimen/padding_margin_medium_16"
+            android:layout_marginBottom="@dimen/padding_margin_medium_16"
+            app:backgroundTint="@color/ttu_light_gray"
+            app:fabSize="mini"
+            app:maxImageSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomActions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/black_26"
+            app:srcCompat="@drawable/ic_back"
+            android:tint="?colorAccent"
+            app:useCompatPadding="false" />
+
+    <include
+            android:id="@+id/bottomActions"
+            layout="@layout/chat_new_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

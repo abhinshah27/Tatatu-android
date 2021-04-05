@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ViewersTheme" parent="AppTheme"/>
+
+    <style name="NoResultStyle" parent="Regular14">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/activity_margin_lg</item>
+        <item name="android:paddingEnd">@dimen/activity_margin_lg</item>
+        <item name="android:paddingTop">50dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <style name="ScrollbarStyle">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarThumbVertical">@drawable/custom_scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/custom_scrollbar_track</item>
+        <item name="android:scrollbarSize">6dp</item>
+        <item name="android:scrollbarFadeDuration">700</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
+    <style name="NewChatMessageEditText" parent="NewCommentEditText">
+        <item name="android:layout_marginTop">@dimen/padding_margin_small_6</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_medium_16</item>
+        <item name="android:layout_marginEnd">@dimen/padding_margin_small_8</item>
+    </style>
+
+
+
+    <style name="NewChatMessageAvatar" parent="NewCommentAvatar">
+        <item name="android:layout_marginTop">@dimen/padding_margin_default</item>
+        <item name="android:layout_marginBottom">@dimen/padding_margin_small_6</item>
+    </style>
+
+
+    <style name="ChatMessagesLatSeen" parent="Bold14">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?textColorSecondary</item>
+    </style>
+
+
+    <style name="ChatTextIncoming" parent="Regular14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?chatTextPrimary</item>
+        <item name="android:background">@drawable/background_chat_incoming_last</item>
+        <item name="android:padding">@dimen/padding_margin_medium_12</item>
+        <item name="android:minHeight">@dimen/chat_message_min_height</item>
+        <item name="android:minWidth">@dimen/chat_message_min_width</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+
+    <style name="ChatTextOutgoing" parent="ChatTextIncoming">
+        <item name="android:background">@drawable/background_chat_outgoing_last</item>
+    </style>
+
+    <style name="ChatTextDetail" parent="Regular12">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_small_6</item>
+        <item name="android:textColor">?chatTextSecondary</item>
+    </style>
+
+    <style name="ChatEditBottomSheetText" parent="Regular16">
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <style name="ChatCallSearchBox">
+        <item name="android:layout_marginTop">@dimen/dp_24</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginEnd">@dimen/dp_16</item>
+    </style>
+
+    <style name="ChatCallIcons">
+        <item name="android:tint">@color/menu_icon_color</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ChatCallIcons.VideoCall">
+        <item name="android:layout_width">@dimen/dp_22</item>
+        <item name="android:layout_height">@dimen/dp_22</item>
+        <item name="android:layout_marginEnd">@dimen/dp_24</item>
+    </style>
+
+    <style name="ChatCallIcons.Call">
+        <item name="android:layout_width">@dimen/dp_20</item>
+        <item name="android:layout_height">@dimen/dp_20</item>
+    </style>
+
+    <style name="ChatBadgeCountBadge" parent="Regular11">
+        <item name="android:layout_width">@dimen/dp_20</item>
+        <item name="android:layout_height">@dimen/dp_20</item>
+        <item name="android:textColor">?textColorPrimaryInverted</item>
+        <item name="android:layout_marginStart">@dimen/dp_14</item>
+    </style>
+
+
+    <style name="ChatTextSystem" parent="Regular14">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?chatSystemTextColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:background">@drawable/background_chat_system</item>
+        <item name="android:padding">@dimen/padding_margin_small_10</item>
+        <item name="android:minHeight">@dimen/chat_message_min_height</item>
+        <item name="android:minWidth">@dimen/chat_message_min_width</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+
+</resources>

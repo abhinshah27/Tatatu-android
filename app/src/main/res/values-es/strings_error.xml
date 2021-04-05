@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="error_existing_username">El nombre de usuario %s no está disponible</string>
+    <string name="error_auth_generic">No se pudo completar la autenticación debido a un problema de nuestra parte. Inténtalo de nuevo más tarde</string>
+
+    <string name="error_auth_login_custom">Escribiste un nombre de usuario o contraseña incorrectos, o debes primero registrarte</string>
+    <string name="error_auth_signup_needed">El usuario no existe o debes aceptar los Términos y condiciones</string>
+    <string name="error_auth_email_verification">Verifica tu dirección de correo electrónico desde tu bandeja de entrada</string>
+    <string name="error_auth_existing_user">El usuario ya existe</string>
+
+    <string name="error_signup_age">Debes tener más de 18 años para registrarte</string>
+
+    <string name="error_generic">No pudimos realizar la operación deseada. Inténtalo de nuevo</string>
+    <string name="error_upload_media">No pudimos subir tus archivos multimedia. Inténtalo de nuevo más tarde</string>
+
+    <string name="error_connection_lost">Conexión de datos no disponible</string>
+
+    <string name="error_invite_email_already">Correo electrónico ya invitado o usuario ya existente</string>
+
+</resources>

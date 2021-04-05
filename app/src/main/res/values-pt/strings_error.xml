@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="error_existing_username">O usuário %s não está disponível</string>
+    <string name="error_auth_generic">A autenticação não pôde ser concluída devido a um problema nosso. Tente novamente mais tarde</string>
+
+    <string name="error_auth_login_custom">Você digitou um nome de usuário ou senha incorretos ou precisa se cadastrar primeiro</string>
+    <string name="error_auth_signup_needed">O usuário não existe ou você precisa aceitar os Termos e Condições</string>
+    <string name="error_auth_email_verification">Verifique seu endereço de e-mail na sua caixa de entrada</string>
+    <string name="error_auth_existing_user">O usuário já existe</string>
+
+    <string name="error_signup_age">Você precisa ter 18 anos ou mais para se cadastrar</string>
+
+    <string name="error_generic">Não conseguimos executar a operação desejada. Tente novamente</string>
+    <string name="error_upload_media">Não conseguimos enviar sua mídia. Tente novamente mais tarde</string>
+
+    <string name="error_connection_lost">Não há conexão de dados disponível</string>
+
+    <string name="error_invite_email_already">O e-mail já foi convidado ou o usuário já existe</string>
+
+</resources>

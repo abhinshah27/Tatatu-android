@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            style="@style/ProfileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:expandedTitleGravity="top"
+                    app:titleEnabled="false"
+                    android:elevation="0dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="?attr/actionBarSize"
+                        android:orientation="vertical">
+
+                    <com.google.android.material.tabs.TabLayout
+                            style="@style/FollowTabLayout"
+                            android:id="@+id/follow_tablayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/follow_tab_layout_height">
+                        <com.google.android.material.tabs.TabItem
+                                tools:text="@string/profile_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+                        <com.google.android.material.tabs.TabItem
+                                tools:text="@string/profile_following"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"/>
+                    </com.google.android.material.tabs.TabLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/common_toolbar_back"
+                        android:id="@+id/followToolbar"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+                android:id="@+id/tabContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

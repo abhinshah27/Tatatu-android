@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="name" type="String"/>
+        <variable name="username" type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:paddingBottom="@dimen/padding_margin_small_6">
+
+        <include layout="@layout/common_profile_picture"
+                 android:id="@+id/roundAvatarImageView"
+                 android:layout_width="@dimen/round_avatar_size"
+                 android:layout_height="@dimen/round_avatar_size"
+                 tools:src="@drawable/placeholder"
+                 app:layout_constraintTop_toTopOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintBottom_toBottomOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintStart_toStartOf="@+id/roundAvatarMomentImageView"
+                 app:layout_constraintEnd_toEndOf="@+id/roundAvatarMomentImageView"/>
+
+        <ImageView
+                android:id="@+id/roundAvatarMomentImageView"
+                android:layout_width="@dimen/round_avatar_moment_size"
+                android:layout_height="@dimen/round_avatar_moment_size"
+                app:srcCompat="@drawable/moment_background"
+                android:tint="?colorAccent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+                android:id="@+id/roundAvatarCelebrityImageView"
+                android:layout_width="@dimen/round_avatar_size"
+                android:layout_height="@dimen/round_avatar_size"
+                app:srcCompat="@drawable/stars_70"
+                android:tint="?colorAccent"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintStart_toStartOf="@+id/roundAvatarMomentImageView"
+                app:layout_constraintEnd_toEndOf="@+id/roundAvatarMomentImageView"/>
+
+        <FrameLayout
+                android:id="@+id/userNameContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintBottom_toTopOf="@+id/userFullNameTextView">
+            <TextView
+                    style="@style/RoundAvatarTextView"
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_horizontal"
+                    tools:text="@string/placeholder"
+                    android:text="@{username}"
+                    android:drawablePadding="@dimen/padding_margin_small_4"/>
+        </FrameLayout>
+
+        <TextView
+                style="@style/RoundAvatarSecondaryTextView"
+                android:id="@+id/userFullNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder"
+                android:text="@{name}"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"
+                app:layout_constraintBottom_toTopOf="@+id/followerTTUBalanceTextView"
+                app:layout_goneMarginBottom="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                style="@style/RoundAvatarTTUTextView"
+                android:id="@+id/followerTTUBalanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/placeholder"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/roundAvatarImageView"
+                app:layout_constraintBottom_toBottomOf="@+id/roundAvatarImageView"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/roundAvatarImageView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

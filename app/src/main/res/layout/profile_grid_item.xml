@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_margin_small_4">
+
+        <View
+                android:id="@+id/backgroundHolder"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:background="?preloadingBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:srcCompat="@drawable/ic_preloading_video"
+                app:layout_constraintWidth_percent=".3"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@+id/backgroundHolder"
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundHolder"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundHolder"
+                app:layout_constraintTop_toTopOf="@+id/backgroundHolder"/>
+
+        <ImageView android:layout_width="0dp" android:layout_height="0dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintDimensionRatio="1:1"
+                   app:layout_constraintEnd_toEndOf="parent" android:id="@+id/postPreview"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+<!--        <com.google.android.exoplayer2.ui.PlayerView android:layout_width="0dp" android:layout_height="0dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintDimensionRatio="1:1"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/postPreviewVideo"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:use_controller="false"-->
+<!--                android:visibility="gone"/>-->
+
+        <ImageView
+                android:id="@+id/postType"
+                android:layout_gravity="bottom|end"
+                android:layout_width="@dimen/profile_list_item_type_icon_size"
+                android:layout_height="@dimen/profile_list_item_type_icon_size"
+                app:layout_constraintEnd_toEndOf="@id/postPreview"
+                app:layout_constraintBottom_toBottomOf="@id/postPreview"/>
+
+        <TextView
+                style="@style/HomePostNewsTextView"
+                android:id="@+id/labelNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_news_label"
+                app:layout_constraintTop_toTopOf="@+id/postPreview"
+                app:layout_constraintStart_toStartOf="@+id/postPreview"/>
+
+        <!-- View handling ripple effect -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+              android:background="@drawable/default_ripple_inverted"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintDimensionRatio="1:1"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

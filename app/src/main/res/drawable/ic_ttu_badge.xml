@@ -1,0 +1,18 @@
+<vector android:height="16dp" android:viewportHeight="564"
+    android:viewportWidth="564" android:width="16dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h564v564h-564z M 0,0"/>
+        <path android:fillColor="@color/ttu_sunfloweryellow" android:fillType="evenOdd"
+            android:pathData="M543,328L560,304C565,296 565,288 565,279 565,274 562,266 560,260L543,236C541,233 541,228 541,225L546,196C549,180 543,166 530,158L506,142C503,140 500,137 500,132L492,102C490,89 476,75 463,73L433,65C431,65 425,62 422,59L406,35C398,22 382,16 369,19L339,24C336,24 331,24 328,22L304,6C291,-3 274,-3 263,6L236,22C233,24 228,24 225,24L196,19C180,16 166,22 155,35L139,59C137,62 134,65 129,65L102,73C88,75 75,89 72,102L64,129C64,132 61,137 59,140L34,156C24,166 16,180 18,193L18,196 24,225C24,228 24,233 21,236L5,260C2,268 0,274 0,283 0,291 2,296 5,304L21,328C24,331 24,336 24,339L18,369C16,385 21,398 34,406L59,422C61,425 64,428 64,433L72,462C75,476 88,489 102,492L131,500C134,500 139,503 142,505L158,529C166,543 182,548 196,545L225,540C228,540 233,540 236,543L260,559C274,567 291,567 302,559L326,543C328,540 334,540 336,540L366,545C382,548 396,543 404,529L420,505C422,503 425,500 431,500L460,492C474,489 487,476 490,462L498,433C498,430 500,425 503,422L527,406C541,398 546,382 543,369L538,339 538,336C541,334 541,331 543,328Z"
+            android:strokeColor="#00000000"
+            android:strokeLineJoin="round" android:strokeWidth="28.222"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M249,365L392,225"
+            android:strokeColor="#191919" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="42"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M180,296L250,365"
+            android:strokeColor="#191919" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="42"/>
+    </group>
+</vector>

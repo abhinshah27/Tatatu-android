@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/dateHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Regular14"
+            android:textColor="@color/black_54"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/messageStateContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tues, 09 Oct, 14:27"/>
+
+    <!-- INFO: 2019-12-24    removes top margin because dateHeader is hidden anyway -->
+    <rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout
+            android:id="@+id/messageStateContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/chat_margin_from_parent_start"
+            android:layout_marginEnd="@dimen/padding_margin_large_20"
+            android:background="@drawable/background_chat_outgoing_last"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateHeader">
+        android:layout_marginTop="@dimen/padding_margin_default"
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+                android:id="@+id/message"
+                style="@style/ChatTextOutgoing"
+                android:layout_width="0dp"
+                android:minHeight="0dp"
+                tools:text="@string/chat_text_outgoing_missed_video"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/callIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+        <ImageView
+                android:id="@+id/callIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_margin_medium_16"
+                android:layout_marginTop="@dimen/padding_margin_medium_12"
+                tools:src="@drawable/ic_chat_missed_video"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/callBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_margin_small_4"
+                android:paddingBottom="@dimen/padding_margin_small_10"
+                android:paddingStart="@dimen/padding_margin_medium_12"
+                android:paddingEnd="@dimen/padding_margin_medium_12"
+                style="@style/Regular14"
+                android:text="@string/chat_missed_call_back"
+                android:textColor="?chatAccent"
+                android:background="@drawable/default_ripple"
+                app:layout_constraintEnd_toEndOf="@id/message"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toBottomOf="@id/message"/>
+
+    </rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout>
+
+    <TextView
+            android:id="@+id/infoFooter"
+            style="@style/ChatTextDetail"
+            app:layout_constraintEnd_toEndOf="@+id/messageStateContainer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/messageStateContainer"
+            app:layout_constraintTop_toBottomOf="@id/messageStateContainer"
+            tools:text="March 4, 14:33"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

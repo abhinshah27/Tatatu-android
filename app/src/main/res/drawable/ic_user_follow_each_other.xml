@@ -1,0 +1,38 @@
+<vector android:height="21dp" android:viewportHeight="670"
+    android:viewportWidth="1481" android:width="45dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h1481v670h-1481z M 0,0"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M1160,17C1061,17 979,98 979,199 979,264 1013,322 1065,353 1093,370 1126,379 1160,379 1198,379 1234,366 1264,345 1311,312 1340,258 1340,198 1340,98 1259,17 1160,17Z"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M1299,398C1260,427 1212,444 1159,444 1107,444 1059,426 1020,398 939,444 879,525 864,622L1159,622 1162,622 1453,622C1438,525 1379,444 1299,398Z"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M312,17C213,17 130,98 130,199 130,264 164,322 218,353 246,370 278,379 312,379 351,379 387,366 416,345 462,312 492,258 492,198 493,98 413,17 312,17Z"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M452,398C413,427 365,444 312,444 259,444 211,426 172,398 91,444 33,525 17,622L309,622 312,622 603,622C591,525 532,444 452,398Z"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M835,417L667,417"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M768,339L839,418 768,493"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M640,181L807,181"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M707,258L636,181 707,105"
+            android:strokeColor="@color/ttu_l_icon_disabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+    </group>
+</vector>

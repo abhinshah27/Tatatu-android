@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_margin_large_34">
+
+        <include layout="@layout/post_detail"
+                 android:id="@+id/postDetail"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                style="@style/PostItemViewCommentsTextView"
+                android:id="@+id/postViewCommentsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_view_comments"
+                app:layout_constraintTop_toBottomOf="@+id/postDetail"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                style="@style/PostItemTranslateTextView"
+                android:id="@+id/postTranslateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_see_translation"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/postViewCommentsTextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

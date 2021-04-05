@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+            android:id="@+id/profile_moment_item"
+            android:paddingTop="@dimen/padding_margin_large_20"
+            android:paddingBottom="@dimen/padding_margin_large_20"
+            android:paddingStart="@dimen/padding_margin_small_8"
+            android:paddingEnd="@dimen/padding_margin_small_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:background="@drawable/create_new_moment"
+            android:layout_width="@dimen/profile_moment_item_size"
+            android:layout_height="@dimen/profile_moment_item_size"/>
+
+        <ImageView
+                android:id="@+id/profile_new_moment_cta"
+                android:layout_width="@dimen/profile_new_moment_image_size"
+                android:layout_height="@dimen/profile_new_moment_image_size"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_plus_sign"/>
+        
+    </FrameLayout>
+</layout>

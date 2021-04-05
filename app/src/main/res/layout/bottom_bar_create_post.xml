@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BackgroundLight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16">
+
+    <include layout="@layout/include_divider_horizontal" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_bottom_lib"
+            style="@style/TextBottomBar"
+            android:layout_weight="1"
+            android:text="@string/library" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_bottom_photo"
+            style="@style/TextBottomBar"
+            android:layout_weight="1"
+            android:text="@string/photo"
+            android:textColor="?postBottomNavItemNormal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_bottom_video"
+            style="@style/TextBottomBar"
+            android:layout_weight="1"
+            android:text="@string/video"
+            android:textColor="?postBottomNavItemNormal" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

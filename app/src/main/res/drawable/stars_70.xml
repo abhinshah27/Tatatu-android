@@ -1,0 +1,22 @@
+<vector android:height="70dp" android:viewportHeight="2469"
+    android:viewportWidth="2469" android:width="70dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h2469v2469h-2469z M 0,0"/>
+        <path android:fillColor="#F7000B" android:fillType="evenOdd"
+            android:pathData="M137,5L162,84C163,87 166,89 170,89L252,89C259,89 262,98 256,102L190,152C187,154 186,157 187,160L212,239C214,246 207,251 201,247L134,198C132,196 127,196 125,198L58,247C52,251 44,246 47,239L72,160C73,157 72,154 69,152L2,102C-3,98 0,89 7,89L89,89C93,89 96,87 97,84L122,5C124,-2 135,-2 137,5Z"
+            android:strokeColor="#00000000"
+            android:strokeLineJoin="round" android:strokeWidth="28.222"/>
+        <path android:fillColor="#F7000B" android:fillType="evenOdd"
+            android:pathData="M2346,5L2372,84C2373,87 2376,89 2379,89L2463,89C2470,89 2473,98 2467,102L2399,152C2396,154 2395,157 2396,160L2422,239C2424,246 2417,251 2411,247L2344,198C2341,196 2338,196 2335,198L2268,247C2263,251 2255,246 2257,239L2283,160C2284,157 2283,154 2280,152L2213,102C2207,98 2210,89 2217,89L2300,89C2303,89 2306,87 2307,84L2333,5C2335,-2 2344,-2 2346,5Z"
+            android:strokeColor="#00000000"
+            android:strokeLineJoin="round" android:strokeWidth="28.222"/>
+        <path android:fillColor="#F7000B" android:fillType="evenOdd"
+            android:pathData="M137,2227L162,2306C163,2309 166,2311 170,2311L252,2311C259,2311 262,2320 256,2324L190,2373C187,2375 186,2379 187,2382L212,2461C214,2467 207,2473 201,2469L134,2420C132,2418 127,2418 125,2420L58,2469C52,2473 44,2467 47,2461L72,2382C73,2379 72,2375 69,2373L2,2324C-3,2320 0,2311 7,2311L89,2311C93,2311 96,2309 97,2306L122,2227C124,2220 135,2220 137,2227Z"
+            android:strokeColor="#00000000"
+            android:strokeLineJoin="round" android:strokeWidth="28.222"/>
+        <path android:fillColor="#F7000B" android:fillType="evenOdd"
+            android:pathData="M2346,2227L2372,2306C2373,2309 2376,2311 2379,2311L2463,2311C2470,2311 2473,2320 2467,2324L2399,2373C2396,2375 2395,2379 2396,2382L2422,2461C2424,2467 2417,2473 2411,2469L2344,2420C2341,2418 2338,2418 2335,2420L2268,2469C2263,2473 2255,2467 2257,2461L2283,2382C2284,2379 2283,2375 2280,2373L2213,2324C2207,2320 2210,2311 2217,2311L2300,2311C2303,2311 2306,2309 2307,2306L2333,2227C2335,2220 2344,2220 2346,2227Z"
+            android:strokeColor="#00000000"
+            android:strokeLineJoin="round" android:strokeWidth="28.222"/>
+    </group>
+</vector>

@@ -1,0 +1,26 @@
+<vector android:height="24dp" android:viewportHeight="811"
+    android:viewportWidth="881" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h881v811h-881z M 0,0"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M88,619C43,558 17,484 17,405 17,190 207,17 441,17 675,17 865,190 865,405 865,618 675,791 441,791 348,791 263,764 194,719"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M195,718L17,791 89,618"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M443,388C458,388 470,393 482,403 492,413 497,426 497,440 497,455 492,468 482,479 470,489 458,494 443,494 428,494 416,489 406,479 395,468 390,455 390,440 390,426 395,413 406,403 416,393 428,388 443,388Z"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M629,388C643,388 656,393 666,403 677,413 682,426 682,440 682,455 677,468 666,479 656,489 643,494 629,494 614,494 602,489 591,479 581,468 575,455 575,440 575,426 581,413 591,403 602,393 614,388 629,388Z"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M258,388C274,388 286,393 297,403 307,413 312,426 312,440 312,455 307,468 297,479 286,489 274,494 258,494 244,494 231,489 221,479 211,468 205,455 205,440 205,426 211,413 221,403 231,393 244,388 258,388Z"
+            android:strokeColor="@color/menu_icon_color" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+    </group>
+</vector>

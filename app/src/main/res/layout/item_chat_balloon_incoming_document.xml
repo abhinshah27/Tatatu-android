@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <include
+            android:id="@+id/profilePicture"
+            layout="@layout/common_profile_picture"
+            android:layout_width="@dimen/chat_profile_picture_size"
+            android:layout_height="@dimen/chat_profile_picture_size"
+            android:layout_marginStart="@dimen/padding_margin_default"
+            app:layout_constraintBottom_toBottomOf="@id/infoFooter"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/dateHeader"
+            style="@style/Regular14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/black_54"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/messageContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tues, 09 Oct, 14:27" />
+
+    <LinearLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_margin_large_20"
+            android:layout_marginEnd="@dimen/chat_margin_from_parent_end"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/background_chat_incoming_last"
+            app:layout_constraintBottom_toTopOf="@+id/infoFooter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/profilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/dateHeader">
+
+        <ImageView
+                android:id="@+id/documentIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/Regular14"
+                android:textColor="?textColorPrimary"
+                tools:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/infoFooter"
+            style="@style/ChatTextDetail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/messageContainer"
+            app:layout_constraintTop_toBottomOf="@+id/messageContainer"
+            tools:text="March 4, 14:33" />
+
+    <TextView
+            android:id="@+id/earningText"
+            style="@style/Regular11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_earning_text_msg"
+            android:textColor="?chatTextSecondary"
+            android:textAlignment="textEnd"
+            app:layout_constraintBaseline_toBaselineOf="@+id/infoFooter"
+            app:layout_constraintEnd_toStartOf="@+id/earningToken"
+            app:layout_constraintStart_toEndOf="@id/infoFooter"/>
+
+    <ImageView
+            android:id="@+id/earningToken"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="@dimen/padding_margin_small_6"
+            android:layout_marginEnd="@dimen/padding_margin_small_4"
+            app:layout_constraintBottom_toBottomOf="@id/earningValue"
+            app:layout_constraintEnd_toStartOf="@+id/earningValue"
+            app:layout_constraintStart_toEndOf="@id/earningText"
+            app:layout_constraintTop_toTopOf="@+id/earningValue"
+            app:srcCompat="@drawable/ic_ttu_token_flat" />
+
+    <TextView
+            android:id="@+id/earningValue"
+            style="@style/Regular12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?chatTextPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/infoFooter"
+            app:layout_constraintEnd_toEndOf="@+id/messageContainer"
+            tools:text="0.01" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

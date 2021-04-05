@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_collapseMode="pin"
+    android:id="@+id/tb_common_calls"
+    style="@style/DefaultToolbarCalls">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_toolbar"
+            android:padding="@dimen/padding_margin_small_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_icon_back_white_header" />
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+                android:id="@+id/txt_tb_title"
+                style="@style/TextViewToolbarCallsTitle"
+                android:layout_width="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/img_add_participant"
+                app:layout_constraintStart_toEndOf="@+id/img_back_arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/call_tatatu_voice" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_add_participant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_ripple_toolbar"
+            android:padding="@dimen/padding_margin_small_10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add_partecipant_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

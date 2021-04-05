@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/messageStateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/padding_margin_default" />
+
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupPlaceHolder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="placeHolder,placeHolderBackground"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintBottom_toTopOf="@id/messageContainerIncoming"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide"/>
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--            android:id="@+id/groupOutgoing"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:visibility="visible"-->
+<!--            app:constraint_referenced_ids="profileOutgoing,infoFooterOutgoing"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+            android:id="@+id/dateHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin_md"
+            style="@style/Regular14"
+            android:textColor="@color/black_54"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/placeHolderBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:text="Tues, 09 Oct, 14:27" />
+
+    <View
+            android:id="@+id/placeHolderBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/divider_on_white"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/groupPlaceHolder"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="@+id/groupPlaceHolder"
+            app:layout_constraintStart_toStartOf="@+id/groupPlaceHolder"
+            app:layout_constraintTop_toTopOf="@+id/groupPlaceHolder"/>
+
+    <ImageView
+            android:id="@+id/placeHolder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/placeHolderBackground"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="@+id/placeHolderBackground"
+            app:layout_constraintStart_toStartOf="@+id/placeHolderBackground"
+            app:layout_constraintTop_toTopOf="@+id/placeHolderBackground"
+            app:srcCompat="@drawable/ic_placeholder_image"/>
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/placeHolderBackground"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="@+id/placeHolderBackground"
+            app:layout_constraintStart_toStartOf="@+id/placeHolderBackground"
+            app:layout_constraintTop_toTopOf="@+id/placeHolderBackground"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+    <include
+            android:id="@+id/profileOutgoing"
+            layout="@layout/common_profile_picture"
+            android:layout_width="@dimen/chat_profile_picture_size"
+            android:layout_height="@dimen/chat_profile_picture_size"
+            android:layout_marginEnd="@dimen/activity_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/infoFooterOutgoing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            style="@style/Regular12"
+            android:textAlignment="textEnd"
+            android:textColor="?chatTextSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageStateContainerInner"
+            tools:text="Read, Tues 09 Oct, 14:33" />
+
+    <rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout
+            android:id="@+id/messageStateContainerInner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/chat_margin_from_parent_start"
+            android:layout_marginEnd="@dimen/padding_margin_large_20"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/infoFooterOutgoing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupPlaceHolder">
+        android:layout_marginTop="@dimen/padding_margin_default"
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+                android:id="@+id/messageOutgoing"
+                style="@style/ChatTextOutgoing"
+                android:layout_alignParentEnd="true"
+                tools:text="Lorem ipsum dolor "
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+        <ImageView
+                android:id="@+id/iconStateInner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="@dimen/padding_margin_small_8"
+                android:layout_marginBottom="@dimen/padding_margin_small_8"
+                android:visibility="invisible"
+                android:duplicateParentState="true"
+                android:tag="iconStateInner"
+                app:srcCompat="@drawable/message_state"
+                app:layout_constraintEnd_toEndOf="@id/messageOutgoing"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toBottomOf="@id/messageOutgoing"/>
+
+        <TextView
+                android:id="@+id/infoFooter"
+                style="@style/ChatTextDetail"
+                app:layout_constraintEnd_toEndOf="@+id/messageOutgoing"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/messageOutgoing"
+                app:layout_constraintTop_toBottomOf="@id/messageOutgoing"
+                tools:text="March 4, 14:33"/>
+    </rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/weblinkTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            style="@style/BoldShadow18"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/weblinkSource"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna " />
+
+    <ImageView
+            android:id="@+id/weblinkIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:srcCompat="@drawable/layer_weblink" />
+
+    <TextView
+            android:id="@+id/weblinkSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            style="@style/RegularShadow16"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/weblinkIcon"
+            app:layout_constraintStart_toEndOf="@+id/weblinkIcon"
+            app:layout_constraintTop_toTopOf="@+id/weblinkIcon"
+            tools:text="the guardian" />
+
+    <ImageView
+            android:id="@+id/iconState"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/activity_margin_md"
+            android:layout_gravity="end|bottom"
+            android:visibility="visible"
+            android:duplicateParentState="true"
+            android:tag="iconState"
+            app:srcCompat="@drawable/message_state"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/groupPlaceHolder"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/groupPlaceHolder"/>
+    android:background="@drawable/chat_status_icon_gradient"
+
+</rs.highlande.app.tatatu.feature.chat.view.MessageOutgoingStateLayout>

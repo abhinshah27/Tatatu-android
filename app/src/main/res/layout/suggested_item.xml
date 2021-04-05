@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="person" type="rs.highlande.app.tatatu.model.SuggestedPerson"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="@dimen/padding_margin_default"
+            android:paddingEnd="@dimen/padding_margin_default"
+            android:background="?selectableItemBackground">
+
+
+        <include
+                layout="@layout/common_round_avatar_with_username"
+                android:id="@+id/followerAvatar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:name="@{person.name}"
+                app:username="@{person.username}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnFollow"/>
+
+        <TextView
+                android:id="@+id/btnFollow"
+                style="@style/DefaultButton.Accent.NoCaps.Follow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

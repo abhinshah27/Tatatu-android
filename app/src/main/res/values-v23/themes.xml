@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- INFO: 2019-06-25    This file is needed because only since M-23 it is possible to give the status bar a color -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Customize your theme here. -->
+
+        <!--
+            There cannot be a "darker" white: this separation has been maintained to indicate the general background of
+            a screen and possible other views' background like toolbars and bottom bars.
+         -->
+        <item name="colorPrimary">@color/ttu_l_primary</item>
+        <item name="colorPrimaryVariant">@color/ttu_l_primary_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/ttu_l_primary_dark</item>
+
+        <!-- Commented: usually used for the status bar color, not valid in this case -->
+        <!--<item name="colorPrimaryDark">@color/ttu_l_primary_dark</item>-->
+
+        <item name="android:statusBarColor">?toolbarBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+
+
+        <item name="buttonColorPrimary">@color/ttu_white</item>
+        <item name="buttonTextColorPrimary">@color/black</item>
+        <item name="buttonColorPrimaryInverted">@color/ttu_whitethree</item>
+        <item name="buttonColorSecondary">@color/ttu_warmgray</item>
+        <item name="buttonOutlinedColor">@color/ttu_warmgray</item>
+
+        <item name="dividerColor">@color/ttu_l_divider</item>
+        <item name="dividerColorSecondary">@color/ttu_l_divider_secondary</item>
+
+        <item name="textColorPrimary">@color/ttu_l_text_primary</item>
+        <item name="textColorSecondary">@color/ttu_l_text_secondary</item>
+        <item name="textColorTitle">@color/ttu_l_text_title</item>
+        <item name="textColorPrimaryLight">@color/ttu_l_text_primary_light</item>
+        <item name="textColorPrimaryInverted">@color/ttu_l_text_primary_inverted</item>
+        <item name="textColorBottomSheet">@color/ttu_l_text_bottom_sheet</item>
+        <item name="buttonTextColorSecondary">@color/ttu_white</item>
+
+        <item name="textColorNoResult">@color/ttu_l_text_no_result</item>
+        <item name="callsBackgroundColor">@color/ttu_black</item>
+        <item name="callsTextColor">@color/ttu_white</item>
+
+
+        <item name="iconColorNormal">@color/ttu_l_icon_normal</item>
+        <item name="iconColorSelected">@color/ttu_l_icon_selected</item>
+        <item name="iconColorAccent">@color/ttu_l_icon_accent</item>
+        <item name="iconColorDisabled">@color/ttu_l_icon_disabled</item>
+
+        <item name="tabSelectedBackgroundColor">@color/white</item>
+        <item name="tabBackgroundColor">@color/ttu_whitethree</item>
+
+        <item name="selectableItemBackground">@drawable/default_ripple</item>
+
+
+        <!-- [START] COMMON COMPONENTS -->
+
+        <item name="toolbarBackground">?colorPrimaryVariant</item>
+        <item name="toolbarIcon">@color/ttu_black</item>
+        <item name="toolbarTitle">@color/ttu_black</item>
+
+        <item name="bottomNavBackground">?colorPrimaryVariant</item>
+        <item name="bottomNavItemTint">@color/bottom_nav_item_tint</item>
+        <item name="bottomNavItemSelected">@color/ttu_l_bottom_nav_selected</item>
+        <item name="bottomNavItemNormal">@color/ttu_l_bottom_nav_normal</item>
+
+        <item name="wfiBackground">@color/ttu_l_background_wfi</item>
+        <item name="wfiLabel">@color/ttu_l_text_label_on_gray</item>
+        <item name="wfiText">?textColorPrimary</item>
+
+        <item name="buttonBorder">@color/black</item>
+
+        <item name="newItemBackground">@color/ttu_l_background_gray</item>
+
+        <item name="preloadingBackground">@color/ttu_l_loading_background</item>
+        <item name="preloadingIcon">@color/ttu_l_loading_icon</item>
+
+        <item name="celebrityIndicatorColor">@color/colorAccent</item>
+
+        <item name="lightBackground">@color/ttu_whitetwo</item>
+        <item name="toolbarTransparentColor">@color/transparent</item>
+
+        <item name="itemColorSelected">@color/ttu_l_item_background_selected</item>
+
+        <!-- [END] COMMON COMPONENTS -->
+
+        <!--CreatePost-->
+        <item name="postDividerColor">@color/ttu_divider</item>
+        <item name="postBottomNavItemSelected">@color/colorAccent</item>
+        <item name="postBottomNavItemNormal">@color/ttu_graylabel</item>
+        <item name="hintPreview">@color/ttu_graylabel</item>
+
+        <!--inviteFriends-->
+        <item name="inviteFriendsTitle">@color/ttu_warmgray</item>
+        <item name="inviteFriendsExpandableBackground">@color/ttu_whitethree</item>
+        <item name="inviteFriendsExpandableText">@color/ttu_l_expandable_text</item>
+        <item name="inviteFriendsEmailSend">@color/ttu_light_gray</item>
+
+        <!--Settings-->
+        <item name="txtUnderLine">@color/ttu_gray_dark</item>
+
+        <!-- Multimedia -->
+        <item name="videoAlphaBlur">@color/ttu_l_alpha_video_detail</item>
+
+        <!--SignUp-->
+        <item name="loginTextBtn">@color/ttu_login_text</item>
+        <item name="loginBtn">@color/red</item>
+        <item name="signUpTitle">@color/ttu_d_bottom_nav_selected</item>
+        <item name="btn_transparent_red">@color/transparentRed</item>
+        <item name="btn_web_view">@color/ttu_blue</item>
+        <item name="or_divider">@color/ttu_white</item>
+
+        <item name="loginInputBackground">@color/ttu_l_background_white</item>
+
+        <item name="followBoxBackground">@color/ttu_l_background_gray</item>
+        <item name="boxBackground">@color/ttu_l_background_gray</item>
+        <item name="profileBackground">@color/ttu_l_background_white</item>
+
+        <item name="inviteBackground">@color/ttu_l_background_white</item>
+
+        <item name="walletInviteButtonBackground">@color/ttu_whitethree</item>
+        <item name="walletInviteColor">@color/ttu_black</item>
+
+
+        <!-- Chat -->
+        <item name="chatIncomingBorder">@color/ttu_white</item>
+        <item name="chatOutgoingBackground">@color/ttu_whitethree</item>
+        <item name="chatTextPrimary">?textColorPrimary</item>
+        <item name="chatTextSecondary">@color/ttu_graylabel</item>
+        <item name="chatAccent">@color/colorAccent</item>
+        <item name="chatCheckboxChecked">@color/ttu_l_chat_checkbox_checked</item>
+        <item name="chatSystemTextColor">?textColorPrimary</item>
+        <item name="chatSystemBackground">@color/ttu_black</item>
+
+    </style>
+
+</resources>

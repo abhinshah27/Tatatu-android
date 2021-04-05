@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SettingsCompleteYourProfileViewModelBinding">
+
+        <variable
+            name="mViewModel"
+            type="rs.highlande.app.tatatu.feature.account.settings.view.viewModel.SettingsCompleteYourProfileViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_complete_your_profile_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginEnd="@dimen/dp_1"
+            android:clipToPadding="false"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="@{(v)-> mViewModel.onClick(v)}"
+            android:padding="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete_chat_icon"
+            tools:ignore="UnusedAttribute" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_complete_profile_title"
+                style="@style/txtCompleteTitle"
+                android:layout_marginTop="@dimen/dp_84"
+                android:text="@string/title_you_have_not_completed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_complete_profile_msg"
+                style="@style/txtPrivacySubTitle"
+                android:layout_marginTop="@dimen/dp_16"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/msg_complete_your_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_complete_profile_title" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_complete_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_complete_your_profile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_complete_profile_update_profile"
+                style="@style/btn_save_changes"
+                android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                android:text="@string/btn_update_profile"
+                android:layout_marginBottom="@dimen/dp_8"
+                app:layout_constraintBottom_toTopOf="@id/btn_complete_profile_update_later"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_complete_profile_update_later"
+                style="@style/btn_discard_changes"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_36"
+                android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                android:text="@string/btn_update_later"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

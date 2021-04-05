@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HomeTextTitle" parent="Bold18">
+        <item name="android:layout_height">22dp</item>
+        <item name="android:textColor">?textColorPrimary</item>
+    </style>
+
+    <style name="HomeTextAction" parent="Regular14">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textColor">@color/ttu_l_text_action</item>
+    </style>
+
+    <style name="LabelTitle.HomePost"/>
+
+    <style name="LabelSubtitle.HomePost"/>
+
+    <style name="HomePostLabelTitleNew" parent="LabelTitle.HomePost">
+        <item name="android:textColor">@color/ttu_l_text_new_item</item>
+    </style>
+
+    <style name="LabelTitle.HomeSuggested">
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginTop">@dimen/home_suggested_picture_margin_bottom</item>
+    </style>
+
+    <style name="LabelSubtitle.HomeSuggested">
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="HomeSectionSocial">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/padding_margin_medium_18</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+    <style name="HomeSectionStreaming">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_margin_medium_16</item>
+        <item name="android:paddingBottom">@dimen/padding_margin_medium_16</item>
+        <item name="android:background">@color/ttu_l_background_streaming</item>
+    </style>
+
+    <style name="HomeStreamingLabel" parent="Regular12">
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_margin_small_8</item>
+        <item name="android:textColor">@color/ttu_warmgray</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">gravity</item>
+    </style>
+
+    <style name="HomePostNewsTextView" parent="@style/Regular11">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">?textColorPrimaryInverted</item>
+        <item name="android:paddingTop">@dimen/dp_2</item>
+        <item name="android:paddingBottom">@dimen/dp_2</item>
+        <item name="android:paddingStart">@dimen/dp_4</item>
+        <item name="android:paddingEnd">@dimen/dp_4</item>
+    </style>
+
+    <style name="DefaultButton.Accent.NoCaps.Follow.Home">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:text">@string/action_follow</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="HomeSuggestedProfilePicture">
+        <item name="android:layout_width">@dimen/home_suggested_picture_with_post</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginStart">@dimen/home_suggested_picture_margin</item>
+        <item name="android:layout_marginBottom">@dimen/home_suggested_picture_margin</item>
+    </style>
+
+</resources>

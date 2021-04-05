@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <include layout="@layout/common_toolbar_back"
+                    android:visibility="gone"
+                    android:id="@+id/followToolbar"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include
+                    layout="@layout/common_search_box"
+                    android:id="@+id/followSearchBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_medium_18"
+                    android:layout_marginStart="@dimen/padding_margin_medium_16"
+                    android:layout_marginEnd="@dimen/padding_margin_medium_16"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ViewStub
+                    android:id="@+id/followViewstub"
+                    android:inflatedId="@+id/followViewstub"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_large_34"
+                    android:layout_marginBottom="@dimen/padding_margin_large_26"
+                    app:layout_constraintTop_toBottomOf="@+id/followSearchBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            <rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout
+                    android:id="@+id/followSRL"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/padding_margin_medium_16"
+                    android:paddingEnd="@dimen/padding_margin_medium_16"
+                    app:layout_constraintTop_toBottomOf="@+id/followViewstub"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/followUserList"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout>
+
+            <TextView
+                    style="@style/LargeText"
+                    android:id="@+id/noResultsFoundTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_margin_large_26"
+                    android:text="@string/no_results_found"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@+id/followSRL"
+                    app:layout_constraintBottom_toBottomOf="@+id/followSRL"
+                    app:layout_constraintVertical_bias="0.1"
+                    app:layout_constraintEnd_toEndOf="@+id/followSRL"
+                    app:layout_constraintStart_toStartOf="@+id/followSRL"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+                android:theme="?android:attr/progressBarStyleLarge"
+                android:id="@+id/followLoadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

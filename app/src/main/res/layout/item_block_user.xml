@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data class="BlockAccountViewModelBinding">
+
+        <variable
+            name="mViewModel"
+            type="rs.highlande.app.tatatu.model.BlockAccountDataList" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_block_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_block_user"
+                android:layout_width="@dimen/round_avatar_size"
+                android:layout_height="@dimen/round_avatar_size"
+                blockUserImage="@{mViewModel.picture}"
+                android:src="@drawable/placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_user_name"
+                style="@style/RoundAvatarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                settingsText="@{mViewModel.username}"
+                android:text="@string/placeholder"
+                app:layout_constraintBottom_toBottomOf="@+id/img_block_user"
+                app:layout_constraintStart_toEndOf="@+id/img_block_user"
+                app:layout_constraintTop_toTopOf="@+id/img_block_user"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_des"
+                style="@style/RoundAvatarSecondaryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                settingsText="@{mViewModel.name}"
+                android:text="@string/placeholder"
+                app:layout_constraintStart_toEndOf="@+id/img_block_user"
+                app:layout_constraintTop_toBottomOf="@+id/txt_user_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_Confirm"
+                style="@style/DefaultButton.Accent.NoCaps.Follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_margin_small_8"
+                android:text="@string/settings_unblock"
+                android:textColor="?attr/textColorPrimaryInverted"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/item_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_14"
+            android:background="?buttonColorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_block_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="person" type="rs.highlande.app.tatatu.model.SuggestedPerson"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <View
+                android:id="@+id/backgroundHolder"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:background="?preloadingBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/ic_preloading_photo"
+                app:layout_constraintWidth_percent=".3"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@+id/backgroundHolder"
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundHolder"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundHolder"
+                app:layout_constraintTop_toTopOf="@+id/backgroundHolder"/>
+
+        <ImageView android:layout_width="@dimen/item_preview_width" android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/postPreview"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- View handling ripple effect -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+                android:background="@drawable/default_ripple_inverted"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <include layout="@layout/common_profile_picture"
+                android:id="@+id/profilePicture"
+                style="@style/HomeSuggestedProfilePicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/postPreview"
+                app:layout_constraintDimensionRatio="h,1:1"
+                tools:srcCompat="@tools:sample/avatars[3]"/>
+
+        <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                style="@style/LabelTitle.HomeSuggested"
+                android:text="@{person.username}"
+                tools:text="alecbaldwin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/postPreview"/>
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                style="@style/LabelSubtitle.HomeSuggested"
+                android:text="@{person.name}"
+                tools:text="Alec Baldwin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userName"/>
+
+        <TextView
+                android:id="@+id/btnFollow"
+                style="@style/DefaultButton.Accent.NoCaps.Follow.Home"
+                android:layout_marginTop="@dimen/home_suggested_button_margin_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

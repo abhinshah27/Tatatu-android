@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="NotificationViewModelBinding">
+
+        <variable
+            name="data"
+            type="rs.highlande.app.tatatu.model.NotificationResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_28"
+        android:paddingEnd="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_24">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_notification_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_ttu_token_flat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_date"
+            style="@style/txtNotificationDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/notification_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification_title"
+            style="@style/txtNotificationTitle"
+            android:layout_width="@dimen/dp_0"
+            app:layout_constraintEnd_toStartOf="@id/txt_notification_date"
+            app:layout_constraintStart_toEndOf="@id/img_notification_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/notification_two_line_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

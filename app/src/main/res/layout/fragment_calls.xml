@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="CallViewModelBinding">
+
+        <variable
+                name="data"
+                type="rs.highlande.app.tatatu.feature.voiceVideoCalls.view.CallViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_calls_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?callsBackgroundColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fl_video_container"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:background="?callsBackgroundColor"
+                android:clickable="true"
+                android:focusable="true"
+                android:keepScreenOn="true"
+                android:onClick="@{(v)-> data.onClick(v)}"
+                android:visibility="@{data.videoFrameLayoutVisibility}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.twilio.video.VideoView
+                    android:id="@+id/primaryVideoView"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mirror="true"
+                    app:scaleType="fill" />
+
+            <View
+                    android:id="@+id/view_video_transparent_background"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:background="?callsBackgroundColor"
+                    android:alpha="0.1"
+                    android:visibility="@{data.viewVideoTransparentBackground}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                    android:id="@+id/view_video_grey_background"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:background="?callsBackgroundColor"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.viewVideoGreyBackground}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                    android:id="@+id/view_voice_grey_background"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="?callsBackgroundColor"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.viewVoiceGreyBackground}"
+                    tools:layout_editor_absoluteX="1dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_thumbnail_video_view"
+                    android:layout_width="@dimen/dp_92"
+                    android:layout_height="@dimen/dp_138"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:clickable="true"
+                    android:elevation="@dimen/dp_4"
+                    android:focusable="true"
+                    android:visibility="@{data.videoFrameLayoutVisibility}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                <com.twilio.video.VideoView
+                        android:id="@+id/thumbnailVideoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:mirror="true"
+                        app:scaleType="fill" />
+
+                <View
+                        android:id="@+id/view_blur_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?buttonTextColorPrimary"
+                        android:visibility="@{data.mThumbnailBlurBackground}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_mute_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="@{data.mImageThumbnailBackground}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_video_call_icon_disabled_small" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                    layout="@layout/common_toolbar_calls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/txt_participants_name"
+                    style="@style/TextViewToolbarCallsName"
+                    android:layout_marginTop="@dimen/dp_42"
+                    android:text="@{data.profileName}"
+                    android:visibility="@{data.participantsName}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tb_common_calls" />
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/txt_call_status_ringing"
+                    style="@style/TextViewToolbarCallsRinging"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@{data.status}"
+                    android:visibility="@{data.callStatusRinging}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_participants_name"
+                    app:layout_constraintBottom_toTopOf="@id/elapsedTime"/>
+
+            <Chronometer
+                    android:id="@+id/elapsedTime"
+                    style="@style/TextViewToolbarCallsRinging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:visibility="@{data.callChronometerStatus}"
+                    app:appChronometer="@{data.callChronometerStatus}"
+                    app:appChronometerTime="@{data.callTime}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_call_status_ringing"
+                    app:layout_constraintBottom_toTopOf="@id/txt_call_disclaimer_encryption"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/txt_call_disclaimer_encryption"
+                    style="@style/TextViewCallsDisclaimer"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/padding_margin_large_34"
+                    android:layout_marginStart="@dimen/padding_margin_large_34"
+                    android:text="@string/call_disclaimer_encryption"
+                    android:visibility="@{data.callEncryptionDisclaimer}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/elapsedTime" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_animation"
+                    android:layout_width="@dimen/dp_250"
+                    android:layout_height="@dimen/dp_250"
+                    android:layout_gravity="end"
+                    android:scaleType="fitXY"
+                    android:visibility="@{data.animationRinging}"
+                    app:layout_constraintBottom_toBottomOf="@id/img_participant_profile"
+                    app:layout_constraintEnd_toEndOf="@id/img_participant_profile"
+                    app:layout_constraintStart_toStartOf="@id/img_participant_profile"
+                    app:layout_constraintTop_toTopOf="@id/img_participant_profile"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="animation_ripple.json"
+                    app:lottie_loop="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_participant_profile"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_120"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:visibility="@{data.incomingParticipantProfile}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_call_status_ringing"
+                    app:profileAvatar="@{data.profileAvatar}" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_started_participant_profile"
+                    android:layout_width="@dimen/dp_142"
+                    android:layout_height="@dimen/dp_142"
+                    android:layout_marginTop="@dimen/dp_92"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:visibility="@{data.incomingStartedParticipantProfile}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_call_status_ringing"
+                    app:profileAvatar="@{data.profileAvatar}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_incoming_accept_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.incomingAcceptCallImageButton}"
+                    app:layout_constraintBottom_toBottomOf="@id/incoming_bottom_guideline"
+                    app:layout_constraintEnd_toEndOf="@id/incoming_accept_guideline"
+                    app:layout_constraintStart_toStartOf="@id/incoming_accept_guideline"
+                    app:layout_constraintTop_toTopOf="@id/incoming_bottom_guideline"
+                    app:srcCompat="@drawable/ic_accept_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_incoming_decline_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.incomingDeclineCallImageButton}"
+                    app:layout_constraintBottom_toBottomOf="@id/incoming_bottom_guideline"
+                    app:layout_constraintEnd_toEndOf="@id/incoming_decline_guideline"
+                    app:layout_constraintStart_toStartOf="@id/incoming_decline_guideline"
+                    app:layout_constraintTop_toTopOf="@id/incoming_bottom_guideline"
+                    app:srcCompat="@drawable/ic_decline_call" />
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/txt_call_incoming_decline"
+                    style="@style/TextViewToolbarCallsButtons"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@string/action_calls_decline"
+                    android:visibility="@{data.callIncomingDeclineText}"
+                    app:layout_constraintEnd_toEndOf="@id/img_incoming_decline_call"
+                    app:layout_constraintStart_toStartOf="@id/img_incoming_decline_call"
+                    app:layout_constraintTop_toBottomOf="@id/img_incoming_decline_call" />
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/txt_call_incoming_accept"
+                    style="@style/TextViewToolbarCallsButtons"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@string/action_calls_accept"
+                    android:visibility="@{data.callIncomingAcceptText}"
+                    app:layout_constraintEnd_toEndOf="@id/img_incoming_accept_call"
+                    app:layout_constraintStart_toStartOf="@id/img_incoming_accept_call"
+                    app:layout_constraintTop_toBottomOf="@id/img_incoming_accept_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_call_started_decline_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:elevation="@dimen/dp_4"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.startedDeclineCall}"
+                    app:layout_constraintBottom_toBottomOf="@id/call_started_decline_guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/call_started_decline_guideline"
+                    app:srcCompat="@drawable/ic_decline_call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_call_started_video_call"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:elevation="@dimen/dp_4"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.videoVisibility}"
+                    app:callTypeVideo="@{data.callType}"
+                    app:isClickVideo="@{data.videoClick}"
+                    app:layout_constraintBottom_toBottomOf="@id/call_started_bottom_guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/call_started_bottom_guideline" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_speaker_camera_call"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_34"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:elevation="@dimen/dp_4"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:visibility="@{data.speakerCameraVisible}"
+                    app:callType="@{data.callType}"
+                    app:isCameraClick="@{data.cameraSwitchIcon}"
+                    app:isClick="@{data.speaker}"
+                    app:layout_constraintBottom_toBottomOf="@id/call_started_bottom_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/call_started_bottom_guideline" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_call_started_mute_call"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_34"
+                    android:background="@drawable/default_ripple_toolbar"
+                    android:elevation="@dimen/dp_4"
+                    android:onClick="@{(v)-> data.onClick(v)}"
+                    android:src="@{data.isMute ? @drawable/ic_mute_rested_active : @drawable/ic_mute_rested}"
+                    android:visibility="@{data.miceVisible}"
+                    app:layout_constraintBottom_toBottomOf="@id/call_started_bottom_guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/call_started_bottom_guideline" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/incoming_decline_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintGuide_percent=".25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/incoming_accept_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintGuide_percent=".75" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/call_started_decline_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintGuide_percent=".72" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/incoming_bottom_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintGuide_percent=".82" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/call_started_bottom_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintGuide_percent=".88" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

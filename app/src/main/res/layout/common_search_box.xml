@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/SearchBox"
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                style="@style/SearchIcon"
+                android:id="@+id/searchIconImageView"
+                android:layout_width="@dimen/search_icon_size"
+                android:layout_height="@dimen/search_icon_size"
+                app:srcCompat="@drawable/ic_nav_search"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+                style="@style/SearchEditText"
+                android:id="@+id/searchLabelEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_gravity="center_vertical|start"
+                android:hint="@string/follow_search_friends_label"
+                android:imeOptions="actionSearch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/searchIconImageView" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/clearSearchIconImageView"/>
+
+        <ImageView
+                style="@style/SearchIcon"
+                android:id="@+id/clearSearchIconImageView"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                app:srcCompat="@drawable/ic_close"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

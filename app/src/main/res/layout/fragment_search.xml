@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.appbar.AppBarLayout
+                        android:id="@+id/appBar"
+                        android:background="?colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="true"
+                        app:elevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <include layout="@layout/common_toolbar_back"
+                                 android:id="@+id/toolbar"/>
+
+                        <include
+                                layout="@layout/common_search_box"
+                                android:id="@+id/searchBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/padding_margin_medium_16"
+                                android:layout_marginEnd="@dimen/padding_margin_medium_16"
+                                android:layout_marginTop="@dimen/padding_margin_default"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"/>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout
+                        android:id="@+id/srl"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/padding_margin_medium_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+                        <androidx.core.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                                style="@style/LargeTextBold"
+                                                android:id="@+id/userListLabel"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingTop="@dimen/padding_margin_small_8"
+                                                android:paddingBottom="@dimen/padding_margin_small_8"
+                                                android:paddingStart="@dimen/padding_margin_large_22"
+                                                android:paddingEnd="@dimen/padding_margin_large_22"
+                                                android:visibility="gone"
+                                                android:text="@string/search_label_users"/>
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/userList"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:paddingStart="@dimen/padding_margin_default"
+                                                android:paddingEnd="@dimen/padding_margin_default"
+                                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                                app:spanCount="3"/>
+
+                                        <TextView
+                                                style="@style/LargeTextBold"
+                                                android:id="@+id/mediaListLabel"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingTop="@dimen/padding_margin_small_8"
+                                                android:paddingBottom="@dimen/padding_margin_small_8"
+                                                android:paddingStart="@dimen/padding_margin_large_22"
+                                                android:paddingEnd="@dimen/padding_margin_large_22"
+                                                android:visibility="gone"
+                                                android:text="@string/search_label_media"/>
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/videoList"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_horizontal"
+                                                android:paddingStart="@dimen/padding_margin_default"
+                                                android:paddingEnd="@dimen/padding_margin_default"
+                                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                                app:spanCount="3"/>
+                                </LinearLayout>
+
+                        </androidx.core.widget.NestedScrollView>
+
+
+                </rs.highlande.app.tatatu.core.ui.BaseSwipeRefreshLayout>
+
+                <TextView
+                        style="@style/LargeText"
+                        android:id="@+id/noResultsFoundTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_margin_large_26"
+                        android:text="@string/no_results_found"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="@+id/srl"
+                        app:layout_constraintBottom_toBottomOf="@+id/srl"
+                        app:layout_constraintVertical_bias="0.1"
+                        app:layout_constraintEnd_toEndOf="@+id/srl"
+                        app:layout_constraintStart_toStartOf="@+id/srl"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

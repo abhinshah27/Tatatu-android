@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="error_existing_username">Der Benutzername &quot;%s&quot; ist bereits vergeben</string>
+    <string name="error_auth_generic">Die Authentifizierung konnte aufgrund eines Problems auf unserer Seite nicht abgeschlossen werden. Bitte versuche es später erneut.</string>
+
+    <string name="error_auth_login_custom">Du hast einen falschen Benutzernamen oder ein falsches Passwort eingegeben, oder du musst dich zuerst anmelden</string>
+    <string name="error_auth_signup_needed">Der Benutzer existiert nicht oder du musst die Allgemeinen Geschäftsbedingungen akzeptieren</string>
+    <string name="error_auth_email_verification">Bitte überprüfe deine E-Mail-Adresse im Posteingang</string>
+    <string name="error_auth_existing_user">Der Benutzer schon existiert</string>
+
+    <string name="error_signup_age">Du musst mindestens 18 Jahre alt sein, um dich anzumelden</string>
+
+    <string name="error_generic">Die gewünschte Operation konnte nicht ausgeführt werden. Bitte versuche es erneut</string>
+    <string name="error_upload_media">Wir konnten deine Medien nicht hochladen. Bitte versuche es später erneut</string>
+
+    <string name="error_connection_lost">Keine Datenverbindung vorhanden</string>
+
+    <string name="error_invite_email_already">E-Mail-Adresse bereits eingeladen oder Benutzer existiert bereits</string>
+
+</resources>

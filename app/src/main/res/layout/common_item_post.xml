@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+                                                       android:layout_width="@dimen/item_preview_width"
+                                                       android:layout_height="wrap_content">
+
+        <View
+                android:id="@+id/backgroundHolder"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:background="?preloadingBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:srcCompat="@drawable/ic_preloading_video"
+                app:layout_constraintWidth_percent=".3"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@+id/backgroundHolder"
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundHolder"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundHolder"
+                app:layout_constraintTop_toTopOf="@+id/backgroundHolder"/>
+
+        <ImageView android:layout_width="0dp" android:layout_height="0dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintDimensionRatio="1:1"
+                   app:layout_constraintEnd_toEndOf="parent" android:id="@+id/postPreview"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                style="@style/HomePostNewsTextView"
+                android:id="@+id/labelNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_news_label"
+                app:layout_constraintTop_toTopOf="@+id/postPreview"
+                app:layout_constraintStart_toStartOf="@+id/postPreview"/>
+
+        <ImageView
+                android:id="@+id/postType"
+                android:layout_gravity="bottom|end"
+                android:layout_width="@dimen/profile_list_item_type_icon_size"
+                android:layout_height="@dimen/profile_list_item_type_icon_size"
+                app:layout_constraintEnd_toEndOf="@id/postPreview"
+                app:layout_constraintBottom_toBottomOf="@id/postPreview"/>
+
+        <!-- View handling ripple effect -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+              android:background="@drawable/default_ripple_inverted"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintDimensionRatio="1:1"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/postTitle"
+                android:layout_width="0dp"
+                style="@style/LabelTitle.HomePost"
+                tools:text="antoniobanderas"
+                app:layout_constraintEnd_toEndOf="@+id/postPreview"
+                app:layout_constraintStart_toStartOf="@+id/postPreview"
+                app:layout_constraintTop_toBottomOf="@+id/postPreview"/>
+
+        <TextView
+                android:id="@+id/postSubTitle"
+                android:layout_width="0dp"
+                style="@style/LabelSubtitle.HomePost"
+                tools:text="Antonio Banderas"
+                app:layout_constraintEnd_toEndOf="@+id/postPreview"
+                app:layout_constraintStart_toStartOf="@+id/postPreview"
+                app:layout_constraintTop_toBottomOf="@+id/postTitle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

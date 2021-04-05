@@ -1,0 +1,296 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="rs.highlande.app.tatatu">
+
+    <!-- [START] NORMAL PERMISSIONS ============================================================ -->
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Allows not to show a notification when downloading a file -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- [END] NORMAL PERMISSIONS ============================================================== -->
+
+
+    <!-- [START] DANGEROUS PERMISSIONS ========================================================= -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- [END] DANGEROUS PERMISSIONS =========================================================== -->
+
+
+    <!-- FEATURES -->
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature
+            android:name="android.hardware.camera.autofocus"
+            android:required="false" />
+
+
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <!--    <uses-feature android:glEsVersion="0x00020000" android:required="true" />-->
+
+    <!-- SUPPORTS -->
+    <!--    <supports-screens-->
+    <!--            android:anyDensity="true"-->
+    <!--            android:largeScreens="true"-->
+    <!--            android:normalScreens="true"-->
+    <!--            android:resizeable="true"-->
+    <!--            android:smallScreens="true"-->
+    <!--            android:xlargeScreens="false"/>-->
+
+
+    <application
+            android:name=".TTUApp"
+            android:allowBackup="true"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:requestLegacyExternalStorage="true"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="AllowBackup,GoogleAppIndexingWarning,HardcodedDebugMode,UnusedAttribute">
+
+        <!-- INFO: 2019-11-13    removes custom configuration for test build to Comscore -->
+        <!--        android:networkSecurityConfig="@xml/network_security_config"-->
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="4be7bbd3ae8a59362e4991823037facb5cd5d303" />
+
+        <!--
+            Set custom default icon. This is used when no icon is set for incoming notification messages.
+            See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_notification_tray" />
+
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent" />
+        <!-- Set default notification channel -->
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/notification_channel_id" />
+
+
+        <!-- [START] SERVICES AND RECEIVERS -->
+
+        <!-- SOCKETS -->
+        <service
+                android:name=".connection.SubscribeToSocketService"
+                android:exported="false" />
+        <service
+                android:name=".connection.SubscribeToSocketServiceChat"
+                android:exported="false" />
+
+        <service
+                android:name=".connection.NotificationService"
+                android:exported="false" />
+        <service
+                android:name=".feature.notification.service.FirebaseService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+                android:name=".feature.voiceVideoCalls.services.CallServices"
+                android:exported="false"
+                android:foregroundServiceType="phoneCall" />
+
+        <service
+                android:name=".feature.chat.HandleChatsUpdateService"
+                android:exported="false" />
+        <service
+                android:name=".feature.chat.HandleUnsentMessagesService"
+                android:exported="false" />
+
+        <!-- [END] SERVICES AND RECEIVERS -->
+
+
+        <!-- [START] Activities -->
+
+        <activity
+                android:name=".feature.splash.view.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+            <!-- Branch URI scheme -->
+            <intent-filter>
+                <data
+                        android:host="open"
+                        android:scheme="Tatatu" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="${branchAppLink}"
+                        android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+
+
+        <!-- Branch init -->
+        <meta-data
+                android:name="io.branch.sdk.BranchKey"
+                android:value="key_live_paIncSOqaGjKpXhjQxvG5hpfrBmWr4Lp" />
+        <meta-data
+                android:name="io.branch.sdk.BranchKey.test"
+                android:value="key_test_ecLgfGSteSlIf6liUFwV1biktrpZDWD5" />
+
+        <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment)-->
+        <meta-data
+                android:name="io.branch.sdk.TestMode"
+                android:value="${branchTestMode}" />
+
+
+        <!-- Branch install referrer tracking -->
+        <!-- INFO: 2020-02-18    removed as part of Google's modification that stops broadcasts to INSTALL_REFERRER filter -->
+<!--        <receiver-->
+<!--             android:name="io.branch.referral.InstallListener"-->
+<!--             android:exported="true">-->
+<!--             <intent-filter>-->
+<!--                 <action android:name="com.android.vending.INSTALL_REFERRER" />-->
+<!--             </intent-filter>-->
+<!--        </receiver>-->
+
+
+        <activity
+                android:name=".feature.onBoarding.view.OnBoardingActivity"
+                android:theme="@style/AppTheme.OnBoarding" />
+
+        <activity
+                android:name=".feature.main.view.MainActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable" />
+        </activity>
+
+        <activity
+                android:name="rs.highlande.app.tatatu.feature.createPost.view.CreatePostActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan" />
+
+        <activity
+                android:name=".feature.suggested.view.SuggestedActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.account.AccountActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.inviteFriends.view.InviteFriendsActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity
+                android:name=".feature.multimediaContent.view.MultimediaActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.post.PostActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.account.settings.view.SettingsEmailSentActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.authentication.AuthActivity"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".feature.authentication.InvisibleGmailActivity"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".feature.multimediaContent.view.VideoPlayerActivity"
+                android:configChanges="orientation|screenSize" />
+
+        <activity
+                android:name=".feature.notification.view.activity.NotificationActivity"
+                android:launchMode="singleInstance"
+                android:screenOrientation="portrait" />
+
+        <!-- AUTH0 -->
+        <activity
+                android:name="com.auth0.android.provider.RedirectActivity"
+                android:screenOrientation="unspecified" />
+        <activity
+                android:name="com.auth0.android.provider.AuthenticationActivity"
+                android:screenOrientation="unspecified" />
+        <activity
+                android:name="com.auth0.android.provider.WebAuthActivity"
+                android:screenOrientation="unspecified"
+                tools:node="remove" />
+
+        <!-- CHAT -->
+        <activity
+                android:name=".feature.chat.view.ChatActivity"
+                android:screenOrientation="portrait" />
+
+        <!-- CALLS -->
+        <activity
+                android:name=".feature.voiceVideoCalls.view.CallActivity"
+                android:excludeFromRecents="true"
+                android:launchMode="singleInstance"
+                android:screenOrientation="portrait" />
+
+        <!-- [END] Activities -->
+
+    </application>
+</manifest>

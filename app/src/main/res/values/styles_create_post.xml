@@ -1,0 +1,98 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--image styles-->
+    <style name="ImgPostGallery">
+        <item name="srcCompat">@drawable/ic_launcher_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="ImgCreatePost">
+        <item name="srcCompat">@drawable/ic_launcher_background</item>
+        <item name="android:layout_width">@dimen/dp_108</item>
+        <item name="android:layout_height">@dimen/dp_108</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="TextViewSubTitle" parent="Regular14">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="TextViewSubTitleGrayDark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato_bold</item>
+        <item name="android:textColor">?toolbarTitle</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColorHint">@color/ttu_graylabel</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="TextBottomBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:textColor">?postBottomNavItemSelected</item>
+        <item name="android:textColorHint">?postBottomNavItemNormal</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--Spinner-->
+
+    <style name="SpinnerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--EditTextViewStyle-->
+    <style name="EdtCreatePostDark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato</item>
+        <item name="android:textColor">?textColorPrimary</item>
+        <item name="android:textColorHint">?hintPreview</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
+        <item name="android:imeOptions">actionNone</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarSize">@dimen/dp_4</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+
+    <!--ButtonStyle-->
+    <style name="BtnPreviewPostRed" parent="DefaultButton.Accent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/lato_heavy</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <!--Background-->
+    <style name="BackgroundLight">
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+
+</resources>

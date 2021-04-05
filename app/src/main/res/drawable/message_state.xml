@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Message read -->
+    <item app:message_state_sent="false"
+            app:message_state_delivered="false"
+            app:message_state_read="true"
+            android:drawable="@drawable/ic_chat_message_read"/>
+
+    <!-- Message delivered -->
+    <item app:message_state_sent="false"
+            app:message_state_delivered="true"
+            app:message_state_read="false"
+            android:drawable="@drawable/ic_chat_message_delivered"/>
+
+    <!-- Message sent -->
+    <item app:message_state_sent="true"
+            app:message_state_delivered="false"
+            app:message_state_read="false"
+            android:drawable="@drawable/ic_chat_message_sent"/>
+
+</selector>

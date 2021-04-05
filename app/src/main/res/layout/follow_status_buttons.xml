@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:padding="@dimen/dp_2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    <TextView
+            style="@style/FollowButton"
+            android:id="@+id/followRelationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/follow_button_width"
+            android:text="@string/profile_followback"
+            android:visibility="visible"
+            android:textColor="?attr/buttonTextColorPrimary"
+            android:layout_marginEnd="@dimen/padding_margin_small_8"/>
+
+    <TextView
+            style="@style/DefaultButton.Outlined"
+            android:id="@+id/followingButton"
+            android:minWidth="@dimen/follow_button_width"
+            android:text="@string/profile_following"
+            android:layout_marginEnd="@dimen/padding_margin_small_8"
+            android:visibility="invisible"/>
+
+    <TextView
+            style="@style/DefaultButton.Secondary"
+            android:id="@+id/requestedButton"
+            android:minWidth="@dimen/follow_button_width"
+            android:text="@string/profile_requested"
+            android:visibility="invisible"
+            android:layout_marginEnd="@dimen/padding_margin_small_8"/>
+
+    <ImageView
+            style="@style/FollowerRelationIcon"
+            android:id="@+id/followRelationIcon"
+            android:layout_width="@dimen/follower_relation_icon_size"
+            android:layout_height="@dimen/follower_relation_icon_size"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/ic_user_follow_each_other"
+            android:visibility="invisible"/>
+</FrameLayout>

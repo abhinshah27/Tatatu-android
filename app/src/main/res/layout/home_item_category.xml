@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        android:id="@+id/category"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/WFILabel"
+        android:paddingStart="@dimen/home_item_category_padding_hor"
+        android:paddingEnd="@dimen/home_item_category_padding_hor"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_item_category_height"
+        android:background="@drawable/home_category_gradient"
+        tools:text="Movies"/>

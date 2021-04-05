@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="CreatePostDisplayModelBinding">
+
+        <variable
+                name="data"
+                type="rs.highlande.app.tatatu.model.DataListDisplay" />
+    </data>
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_share_post"
+            style="@style/TextViewSubTitle"
+            android:layout_width="match_parent"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:paddingTop="@dimen/padding_margin_medium_16"
+            android:paddingStart="@dimen/dp_3"
+            android:paddingEnd="@dimen/dp_3"
+            android:paddingBottom="@dimen/dp_28"
+            android:text="@string/msg_post_share"/>
+</layout>

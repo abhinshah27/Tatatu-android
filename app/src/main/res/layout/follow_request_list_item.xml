@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="user" type="rs.highlande.app.tatatu.model.User"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_margin_medium_14">
+
+        <include
+                layout="@layout/common_round_avatar_with_username"
+                android:id="@+id/followerAvatar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:name="@{user.name}"
+                app:username="@{user.username}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/followerConfirmBackButton"/>
+
+        <TextView
+                style="@style/DefaultButton.Accent.NoCaps.Follow"
+                android:id="@+id/followerConfirmBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/follow_requests_confirm"
+                android:textColor="?attr/textColorPrimaryInverted"
+                android:layout_marginEnd="@dimen/padding_margin_small_8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

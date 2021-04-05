@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- INFO: 2019-06-25    the following attributes are all the colors that need to be handled in case of a switch to and from DarkMode -->
+
+    <!-- TODO: 2019-06-25    still needs to work on these: no present in Home screen -->
+    <attr name="buttonColorPrimary" format="color"/>
+    <attr name="buttonColorSecondary" format="color"/>
+    <attr name="buttonTextColorPrimary" format="color"/>
+    <attr name="buttonTextColorSecondary" format="color"/>
+    <attr name="buttonColorPrimaryInverted" format="color"/>
+
+    <attr name="textColorTitle" format="color"/>
+    <attr name="buttonOutlinedColor" format="color"/>
+
+    <attr name="dividerColor" format="color"/>
+    <attr name="dividerColorSecondary" format="color"/>
+
+    <attr name="textColorPrimary" format="color"/>
+    <attr name="textColorSecondary" format="color"/>
+    <attr name="textColorPrimaryLight" format="color"/>
+    <attr name="textColorPrimaryInverted" format="color"/>
+
+    <attr name="textColorBottomSheet" format="color"/>
+
+    <attr name="iconColorAccent" format="color"/>
+    <attr name="iconColorNormal" format="color"/>
+    <attr name="iconColorDisabled" format="color"/>
+    <attr name="iconColorSelected" format="color"/>
+
+
+    <!-- [START] COMMON COMPONENTS -->
+
+    <attr name="lightBackground" format="color"/>
+    <attr name="itemColorSelected" format="color"/>
+
+    <!-- Button -->
+    <attr name="buttonBorder" format="color"/>
+
+    <!-- Toolbar -->
+    <attr name="toolbarIcon" format="color"/>
+    <attr name="toolbarTitle" format="color"/>
+    <attr name="toolbarBackground" format="color"/>
+    <attr name="createPostToolbarTextColor" format="color"/>
+    <attr name="createPostToolbarBackground" format="color"/>
+    <attr name="toolbarTransparentColor" format="color"/>
+
+    <!-- Bottom Navigation -->
+    <attr name="bottomNavItemTint" format="color"/>
+    <attr name="bottomNavItemSelected" format="color"/>
+    <attr name="bottomNavItemNormal" format="color"/>
+    <attr name="bottomNavBackground" format="color"/>
+
+    <!-- WFI - WalletFriendsInvite -->
+    <attr name="wfiText" format="color"/>
+    <attr name="wfiLabel" format="color"/>
+    <attr name="wfiBackground" format="color"/>
+    <attr name="textColorNoResult" format="color"/>
+    <attr name="callsBackgroundColor" format="color"/>
+    <attr name="callsTextColor" format="color"/>
+    <attr name="celebrityIndicatorColor" format="color"/>
+
+    <attr name="boxBackground" format="color"/>
+
+    <attr name="walletInviteButtonBackground" format="color"/>
+    <attr name="walletInviteColor" format="color"/>
+
+    <declare-styleable name="FollowButton">
+        <attr name="relationState" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="following" value="1"/>
+            <enum name="follower" value="2"/>
+            <enum name="friends" value="3"/>
+            <enum name="requested" value="4"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- [END] COMMON COMPONENTS -->
+
+
+    <!-- Profile -->
+    <attr name="topBarBackground" format="color"/>
+    <attr name="profileBackground" format="color"/>
+
+    <!-- Followers/Following -->
+    <attr name="followBoxBackground" format="color"/>
+    <attr name="tabSelectedBackgroundColor" format="color"/>
+    <attr name="tabBackgroundColor" format="color"/>
+
+
+    <!-- New Item -->
+    <attr name="preloadingIcon" format="color"/>
+    <attr name="newItemBackground" format="color"/>
+    <attr name="preloadingBackground" format="color"/>
+
+    <!--createPost-->
+    <attr name="hintPreview" format="color"/>
+    <attr name="postDividerColor" format="color"/>
+    <attr name="postBottomNavItemNormal" format="color"/>
+    <attr name="postBottomNavItemSelected" format="color"/>
+
+    <!--inviteFriends-->
+    <attr name="inviteFriendsTitle" format="color"/>
+    <attr name="inviteFriendsEmailSend" format="color"/>
+    <attr name="inviteFriendsExpandableText" format="color"/>
+    <attr name="inviteFriendsExpandableBackground" format="color"/>
+
+    <attr name="inviteBackground" format="color"/>
+
+    <!--Settings-->
+    <attr name="txtUnderLine" format="color"/>
+
+    <!-- Multimedia -->
+    <attr name="videoAlphaBlur" format="color"/>
+
+    <!-- Sign up-->
+    <attr name="loginBtn" format="color"/>
+    <attr name="loginTextBtn" format="color"/>
+    <attr name="signUpTitle" format="color"/>
+    <attr name="btn_transparent_red" format="color"/>
+    <attr name="btn_web_view" format="color"/>
+    <attr name="or_divider" format="color"/>
+
+    <attr name="loginInputBackground" format="color"/>
+
+
+    <!-- Chat -->
+    <attr name="chatIncomingBorder" format="color"/>
+    <attr name="chatOutgoingBackground" format="color"/>
+    <attr name="chatTextPrimary" format="color"/>
+    <attr name="chatTextSecondary" format="color"/>
+    <attr name="chatAccent" format="color"/>
+    <attr name="chatCheckboxChecked" format="color"/>
+    <attr name="message_state_sent" format="boolean"/>
+    <attr name="message_state_delivered" format="boolean"/>
+    <attr name="message_state_read" format="boolean"/>
+    <attr name="chatSystemTextColor" format="color"/>
+    <attr name="chatSystemBackground" format="color"/>
+
+</resources>

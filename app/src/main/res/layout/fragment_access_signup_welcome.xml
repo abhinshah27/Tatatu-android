@@ -1,0 +1,125 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/SignUpWelcomeText"
+                android:layout_marginStart="@dimen/dp_58"
+                android:layout_marginTop="@dimen/dp_56"
+                android:text="@string/msg_almost_don"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TermsAndConditionPrivacyPolicy"
+                android:layout_marginStart="@dimen/dp_58"
+                android:layout_marginTop="@dimen/dp_7"
+                android:text="@string/msg_thrilled"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="102dp"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/acceptLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_22"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkBoxAccept"
+                        style="@style/CheckboxTermsConditions"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/WelcomeScreen"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/msg_terms_condition"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_22"
+                    android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkBoxAcknowledge"
+                        style="@style/CheckboxTermsConditions"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/WelcomeScreen"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/msg_acknowledge"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkBoxAllow"
+                        style="@style/CheckboxTermsConditions"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/WelcomeScreen"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/msg_tatatu"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkBoxCommunication"
+                        style="@style/CheckboxTermsConditions"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/WelcomeScreen"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/msg_tatatu_receive"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            style="@style/BtnPreviewPostRed"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginEnd="@dimen/dp_28"
+            android:layout_marginBottom="@dimen/dp_100"
+            android:text="@string/btn_Done"/>
+
+</RelativeLayout>

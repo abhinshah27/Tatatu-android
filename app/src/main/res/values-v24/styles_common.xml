@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:background">?toolbarBackground</item>
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="titleTextAppearance">@style/TextViewToolbarTitle</item>
+        <item name="contentInsetStart">@dimen/padding_margin_small_8</item>
+        <item name="contentInsetLeft">@dimen/padding_margin_small_8</item>
+        <item name="contentInsetStartWithNavigation">@dimen/padding_margin_small_8</item>
+    </style>
+
+</resources>

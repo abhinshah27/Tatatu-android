@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SettingsColorPrivacyViewModelBinding">
+
+        <variable
+            name="mViewModel"
+            type="rs.highlande.app.tatatu.feature.account.settings.view.viewModel.SettingsThemePrivacyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <include
+            android:id="@+id/tb_color_privacy"
+            layout="@layout/toolbar_settings" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_color_privacy_title"
+                style="@style/txtPrivacySubTitle"
+                android:layout_marginTop="@dimen/dp_26"
+                android:gravity="start"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/msg_you_can"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_color_privacy_switch_title"
+                style="@style/txtSettingsProfileName"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_18"
+                android:gravity="start|center"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_18"
+                android:text="@string/switch_btn_dark_theme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_color_privacy_title" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_color_privacy_title"
+                style="@style/switch_common"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_18"
+                app:layout_constraintBottom_toBottomOf="@id/txt_color_privacy_switch_title"
+                app:layout_constraintEnd_toEndOf="@id/txt_color_privacy_switch_title"
+                app:layout_constraintTop_toTopOf="@id/txt_color_privacy_switch_title" />
+
+            <View
+                android:id="@+id/color_privacy_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="?dividerColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_color_privacy_switch_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">TaTaTu</string>
+
+    <string name="url_redeem" translatable="false">https://www.tatatuecommerce.com/sso</string>
+    <string name="url_wallet" translatable="false">https://www.mytatatuwallet.com/sso</string>
+
+    <!-- TODO: 2019-10-30    change with PROD publisherID -->
+    <string name="comscore_publisher_id" translatable="false">32987078</string>
+</resources>

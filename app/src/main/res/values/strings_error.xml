@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="error_existing_username">The username %s is not available</string>
+    <string name="error_auth_generic">The authentication could not be completed because of a problem on our side. Please try again later</string>
+
+    <string name="error_auth_login_custom">You typed wrong username or password, or you need to sign up first</string>
+    <string name="error_auth_signup_needed">The user doesn\'t exist or you need to accept Terms and Conditions</string>
+    <string name="error_auth_email_verification">Please, verify your email address from your Inbox</string>
+    <string name="error_auth_existing_user">The user already exists</string>
+
+    <string name="error_signup_age">You have to be 18+ years old to sign up</string>
+
+    <string name="error_generic">We couldn\'t perform the desired operation. Please, try again</string>
+    <string name="error_upload_media">We couldn\'t upload your media. Please, try again later</string>
+
+    <string name="error_connection_lost">No data connection available</string>
+
+    <string name="error_invite_email_already">Email already invited or User already exists</string>
+
+</resources>

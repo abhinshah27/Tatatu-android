@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SettingsViewModelBinding">
+
+        <variable
+                name="data"
+                type="rs.highlande.app.tatatu.model.SettingsList"/>
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UnusedAttribute">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_item_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_32"
+                android:paddingEnd="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_32">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_item_settings_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    settingSrc="@{data.mImage}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/img_item_settings_icons"
+                    app:layout_constraintEnd_toStartOf="@id/img_item_arrow"
+                    app:layout_constraintStart_toEndOf="@id/img_item_settings_icons"
+                    app:layout_constraintTop_toTopOf="@id/img_item_settings_icons">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_item_settings_name"
+                        style="@style/txtSettingsProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/dp_16"
+                        settingsText="@{data.mSettingName}"
+                        android:layout_marginEnd="@dimen/dp_16"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_item_settings_des"
+                        style="@style/txtNotificationSettings"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/dp_16"
+                        settingsDesText="@{data.mDescription}"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:gravity="start"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_item_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_blank_right"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+                android:id="@+id/item_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?dividerColor"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

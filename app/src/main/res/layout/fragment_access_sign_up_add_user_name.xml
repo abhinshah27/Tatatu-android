@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SignUpAddUserBinding">
+
+        <variable
+                name="signUpAddUserViewModel"
+                type="rs.highlande.app.tatatu.feature.authentication.view.signUp.viewModels.SignUpAddUserViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical">
+
+        <include
+                android:id="@+id/tb_main"
+                layout="@layout/toolbar_add_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SignUpWeThrilledText"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:text="@string/msg_pickup_usename"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txl_username"
+                        style="@style/CommonTextInputLayout"
+                        app:errorText="@{signUpAddUserViewModel.errorUserName}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:errorEnabled="true"
+                        android:hint="@string/username"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_username"
+                            style="@style/CommonTextInputEditText"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"/>
+                    <!--                            app:addTextChangedListener="@{signUpAddUserViewModel.mUserNameTextWatcher}"-->
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_verified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginTop="@dimen/dp_38"
+                        android:visibility="@{safeUnbox(signUpAddUserViewModel.verifyUserName)}"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_verified"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_next"
+                style="@style/BtnPreviewPostRed"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:layout_marginBottom="@dimen/dp_74"
+                android:background="@drawable/common_selector_button_accent"
+                android:enabled="@{safeUnbox(signUpAddUserViewModel.buttonEnabled)}"
+                android:onClick="@{(v)-> signUpAddUserViewModel.onNext(v)}"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

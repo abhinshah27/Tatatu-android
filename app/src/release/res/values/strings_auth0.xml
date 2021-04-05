@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="com_auth0_client_id" translatable="false">n1Uy0bIb7eALupmKRU3KWyt2IBi3FSJ2</string>
+    <string name="com_auth0_domain" translatable="false">tatatu-prod.eu.auth0.com</string>
+    <string name="com_auth0_scheme" translatable="false">com.tatatu</string>
+    <string name="com_auth0_audience" translatable="false">https://tatatu.eu.com/api/</string>
+
+</resources>

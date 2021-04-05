@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="SettingsUpgradeAccountViewModelBinding">
+        <variable
+                name="mViewModel"
+                type="rs.highlande.app.tatatu.feature.account.settings.view.viewModel.SettingsUpgradeAccountViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true">
+
+        <include
+                android:id="@+id/tb_upgrade_account"
+                layout="@layout/toolbar_settings"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tb_upgrade_account"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_upgrade_title"
+                    style="@style/txtPrivacySubTitle"
+                    android:layout_marginTop="@dimen/dp_26"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/dp_6"
+                    android:text="@string/msg_if_you_have_one"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_public_figure"
+                    style="@style/txtVerifySubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="46dp"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/dp_18"
+                    android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                    android:paddingBottom="@dimen/dp_22"
+                    android:text="@string/settings_public_figure"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_upgrade_title"/>
+
+            <View
+                    android:id="@+id/public_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_public_figure"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_public_right"
+                    style="@style/imgUpgradeAccount"
+                    android:layout_marginTop="46dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/public_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_upgrade_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_celebrity"
+                    style="@style/txtVerifySubTitle"
+                    android:layout_width="match_parent"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/dp_18"
+                    android:paddingBottom="@dimen/dp_22"
+                    android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                    android:text="@string/settings_celebrity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/public_divider"/>
+
+            <View
+                    android:id="@+id/celebrity_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_celebrity"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_celebrity_right"
+                    style="@style/imgUpgradeAccount"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/celebrity_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/public_divider"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_charity"
+                    style="@style/txtVerifySubTitle"
+                    android:layout_width="match_parent"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/dp_18"
+                    android:paddingBottom="@dimen/dp_22"
+                    android:onClick="@{(v)-> mViewModel.onClick(v)}"
+                    android:text="@string/settings_charity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/celebrity_divider"/>
+
+            <View
+                    android:id="@+id/charity_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_charity"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_charity_right"
+                    style="@style/imgUpgradeAccount"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/charity_divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/celebrity_divider"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_upgrade_message"
+                    style="@style/txtUpgradeAccountSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_56"
+                    android:gravity="start"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="invisible"
+                    android:text="@string/msg_you_can_get_upgrade_account"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/charity_divider"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_upgrade_account_verify_now"
+                    style="@style/btn_save_changes"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    android:text="@string/btn_verify_now"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

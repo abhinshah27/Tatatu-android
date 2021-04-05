@@ -1,0 +1,18 @@
+<vector android:height="8dp" android:viewportHeight="811"
+    android:viewportWidth="740" android:width="7dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h740v811h-740z M 0,0"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M369,228C303,228 251,281 251,346 251,388 273,426 307,446 325,457 345,464 369,464 394,464 418,457 436,442 465,421 485,386 485,346 485,281 432,228 369,228Z"
+            android:strokeColor="?iconColorDisabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M466,493C438,512 405,524 367,524 330,524 296,514 269,493 212,524 169,577 160,638L365,638 367,638 572,638C564,577 523,524 466,493Z"
+            android:strokeColor="?iconColorDisabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+        <path android:fillColor="#00000000" android:fillType="evenOdd"
+            android:pathData="M506,154L369,17 232,154 57,154C34,154 17,173 17,194L17,249 17,656 17,699 17,754C17,777 36,794 57,794L104,794 678,794C701,794 718,775 718,754L718,699 718,294 718,251 718,196C718,173 699,156 678,156L631,156 506,156 506,154Z"
+            android:strokeColor="?iconColorDisabled" android:strokeLineCap="round"
+            android:strokeLineJoin="round" android:strokeWidth="35"/>
+    </group>
+</vector>

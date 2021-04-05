@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?inviteBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_16">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtInviteEmailTitle"
+            android:layout_marginStart="@dimen/dp_2"
+            android:text="@string/email_Name_Title" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_email_full_name"
+            style="@style/edtEmail"
+            android:inputType="textPersonName|textCapWords" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtInviteEmailTitle"
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="@string/email_Email_Title" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_email_address"
+            style="@style/edtEmail"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionGo"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_email"
+            style="@style/BtnPreviewPostRed"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/btn_create_email" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

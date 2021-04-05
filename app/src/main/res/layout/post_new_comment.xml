@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/NewCommentBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                style="@style/NewCommentTopDivider"
+                layout="@layout/common_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/divider"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+                style="@style/NewCommentAvatar"
+                layout="@layout/common_profile_picture"
+                android:id="@+id/profilePicture"
+                android:layout_width="@dimen/post_avatar_size"
+                android:layout_height="@dimen/post_avatar_size"
+                tools:srcCompat="@tools:sample/avatars[3]"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/newCommentButton"
+                app:layout_constraintStart_toEndOf="@+id/profilePicture"
+                app:layout_constraintTop_toTopOf="parent">
+            <androidx.emoji.widget.EmojiAppCompatEditText
+                    android:id="@+id/newCommentEditText"
+                    style="@style/NewCommentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/new_comment_hint" />
+        </ScrollView>
+
+        <ImageView
+                style="@style/FollowRequestsCount"
+                android:id="@+id/newCommentButton"
+                android:layout_width="@dimen/new_comment_button_radius"
+                android:layout_height="@dimen/new_comment_button_radius"
+                android:background="@drawable/common_selector_round_button_accent"
+                app:srcCompat="@drawable/ic_arrow_right"
+                android:tint="@color/post_coment_button_text_color"
+                android:padding="@dimen/padding_margin_small_8"
+                android:layout_marginEnd="@dimen/padding_margin_medium_18"
+                app:layout_constraintTop_toTopOf="@+id/profilePicture"
+                app:layout_constraintBottom_toBottomOf="@+id/profilePicture"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
